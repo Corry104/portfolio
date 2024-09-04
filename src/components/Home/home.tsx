@@ -3,6 +3,7 @@ import './home.scss';
 import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo/logo';
+import { Hourglass } from 'react-loader-spinner';
 
 export const Home: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
@@ -12,41 +13,53 @@ export const Home: React.FC = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            setLettersAnimation('text-animate-hover')   
+            setLettersAnimation('text-animate-hover')
         }, 4000);
     }, [])
 
     return (
-        <div className='container home-page'>
-            <div className='paragraph'>
-                <h1>                    
-                    <AnimatedLetters 
-                        letters={lettersAnimation}
-                        message={greetings}
-                        idx={10}
-                    />
-                    <br/>
-                    <AnimatedLetters 
-                        letters={lettersAnimation}
-                        message={fName}
-                        idx={20}
-                    />
-                    <br/>
-                    <br/>
-                    <AnimatedLetters 
-                        letters={lettersAnimation}
-                        message={job}
-                        idx={31}
-                    />
-                </h1>
-                <div className='sub-description-animation'>
-                    <h2>Full Stack Developer / Mobile Developer / TV App Developer</h2>
-                    <Link to="/contact" className="flat-button">
-                        CONTACT ME
-                    </Link>
+        <>
+            <div className='container home-page'>
+                <div className='paragraph'>
+                    <h1>
+                        <AnimatedLetters
+                            letters={lettersAnimation}
+                            message={greetings}
+                            idx={10}
+                        />
+                        <br />
+                        <AnimatedLetters
+                            letters={lettersAnimation}
+                            message={fName}
+                            idx={15}
+                        />
+                        <br />
+                        <br />
+                        <AnimatedLetters
+                            letters={lettersAnimation}
+                            message={job}
+                            idx={20}
+                        />
+                    </h1>
+                    <div className='sub-description-animation'>
+                        <h2>Full Stack Developer / Mobile Developer / TV App Developer</h2>
+                        <Link to="/contact" className="flat-button">
+                            CONTACT ME
+                        </Link>
+                    </div>
                 </div>
+                <Logo />
             </div>
-            <Logo />
-        </div>
+            <Hourglass
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="hourglass-loading"
+                // wrapperStyle={{}}
+                wrapperClass="loader-active"
+                colors={['#306cce', '#72a1ed']}
+            />           
+        </>
+
     )
 }
