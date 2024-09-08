@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './sidebar.scss';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
