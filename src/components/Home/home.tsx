@@ -14,7 +14,7 @@ export const Home: React.FC = () => {
     useEffect(() => {
         setTimeout(() => {
             setLettersAnimation('text-animate-hover')
-        }, 4000);
+        }, 3000);
     }, [])
 
     return (
