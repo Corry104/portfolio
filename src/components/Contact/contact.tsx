@@ -1,19 +1,24 @@
-import { useEffect, useRef, useState } from 'react';  
+import { useEffect, useRef, useState } from 'react';
 import { Comment } from 'react-loader-spinner';
 import './contact.scss';
 import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
 import emailjs from '@emailjs/browser';
+import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
+
 
 
 export const Contact: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
-    const [emailTemplate, setEmailTemplate] = useState({name:'', email:'', subject:'', message:''})
+    const [emailTemplate, setEmailTemplate] = useState({ name: '', email: '', subject: '', message: '' })
     const refForm = useRef<HTMLFormElement>(null);
+    const contactMe = 'Contact Me'.split('');
     const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
     const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
     const TEMPLATE_ID_ = process.env.REACT_APP_TEMPLATE_ID;
- 
-    const contactMe = 'Contact Me'.split('');
+    const mapRef = useRef(null);
+    const latitude = 34.4400;
+    const longitude = -118.571335;
+
 
     useEffect(() => {
         setTimeout(() => {
@@ -22,22 +27,22 @@ export const Contact: React.FC = () => {
     }, [])
 
 
-    const sendEmail = (e:any) => {
+    const sendEmail = (e: any) => {
         e.preventDefault();
-        
+
         emailjs
             .send(SERVICE_ID, TEMPLATE_ID_, emailTemplate, PUBLIC_KEY)
-            .then((res:any) => {
+            .then((res: any) => {
                 console.log("🚀 ~ .then ~ res:", res)
                 alert('Email sent succesfully - ')
                 // window.location.reload();
-                setEmailTemplate({name:'', email:'', subject:'', message:''})
+                setEmailTemplate({ name: '', email: '', subject: '', message: '' })
 
-            }, (error:any) => {
+            }, (error: any) => {
                 console.log("🚀 ~ .then ~ error:", error)
-                
+
             })
-               
+
     }
 
     return (
@@ -59,27 +64,27 @@ export const Contact: React.FC = () => {
                         <form ref={refForm} onSubmit={sendEmail}>
                             <ul>
                                 <li className="half-view">
-                                    <input 
-                                        type="text" 
-                                        placeholder='Name*' 
-                                        name="name" 
+                                    <input
+                                        type="text"
+                                        placeholder='Name*'
+                                        name="name"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                            setEmailTemplate({...emailTemplate, 'name': e.target.value});
+                                            setEmailTemplate({ ...emailTemplate, 'name': e.target.value });
                                         }}
                                         value={emailTemplate['name']}
-                                        required 
+                                        required
                                     />
                                 </li>
                                 <li className="half-view">
-                                    <input 
-                                        type="email" 
-                                        placeholder='Email*' 
+                                    <input
+                                        type="email"
+                                        placeholder='Email*'
                                         name="email"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                            setEmailTemplate({...emailTemplate, 'email': e.target.value});
+                                            setEmailTemplate({ ...emailTemplate, 'email': e.target.value });
                                         }}
                                         value={emailTemplate['email']}
-                                        required 
+                                        required
                                     />
                                 </li>
                                 <li>
@@ -88,7 +93,7 @@ export const Contact: React.FC = () => {
                                         type="text"
                                         name="subject"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                            setEmailTemplate({...emailTemplate, 'subject': e.target.value});
+                                            setEmailTemplate({ ...emailTemplate, 'subject': e.target.value });
                                         }}
                                         value={emailTemplate['subject']}
                                         required
@@ -99,7 +104,7 @@ export const Contact: React.FC = () => {
                                         placeholder="Message*"
                                         name="message"
                                         onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
-                                            setEmailTemplate({...emailTemplate, 'message': e.target.value});
+                                            setEmailTemplate({ ...emailTemplate, 'message': e.target.value });
                                         }}
                                         value={emailTemplate['message']}
                                         required
@@ -112,7 +117,28 @@ export const Contact: React.FC = () => {
                         </form>
                     </div>
                 </div>
-                
+                <div className="location-info">
+                    Corrado Alfano,
+                    <br />
+                    Valencia, California 91355 <br />
+                    United States of America<br />
+                    <br />
+                    <span>corrado.alfano10@gmail.com</span>
+                </div>
+                <div className='map-container'>
+
+                    <MapContainer center={[latitude, longitude]} zoom={13} ref={mapRef} >
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <Marker position={[latitude, longitude]}>
+                            <Popup>HHHHHH</Popup>
+                        </Marker>
+
+                    </MapContainer>
+                </div>
+
             </div>
 
             {/* loading component */}
