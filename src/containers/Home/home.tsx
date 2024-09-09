@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './home.scss';
-import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
+import { AnimatedLetters } from '../../components/AnimatedLetters/animatedLetters';
 import { Link } from 'react-router-dom';
-import { Logo } from './Logo/logo';
+import { Logo } from '../../components/Logo/logo';
 import { Hourglass } from 'react-loader-spinner';
 
 export const Home: React.FC = () => {

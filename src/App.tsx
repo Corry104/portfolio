@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout/layout';
-import { Contact } from './components/Contact/contact';
-import { Home } from './components/Home/home';
-import { About } from './components/About/about';
+import { Layout } from './containers/Layout/layout';
+import { Contact } from './containers/Contact/contact';
+import { Home } from './containers/Home/home';
+import { About } from './containers/About/about';
 
 const App: React.FC = () => {
   return (

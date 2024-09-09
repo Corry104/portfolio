@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Comment } from 'react-loader-spinner';
 import './contact.scss';
-import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
+import { AnimatedLetters } from '../../components/AnimatedLetters/animatedLetters';
 import emailjs from '@emailjs/browser';
 import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
 

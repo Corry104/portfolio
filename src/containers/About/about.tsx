@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
+import { AnimatedLetters } from '../../components/AnimatedLetters/animatedLetters';
 import './about.scss';
-import { Logo } from '../Home/Logo/logo';
+import { Logo } from '../../components/Logo/logo';
 import { FidgetSpinner } from 'react-loader-spinner';
 
 
