@@ -9,22 +9,16 @@ import { Container } from './components/container/container';
 
 const App: React.FC = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-  const [lettersAnimation, setLettersAnimation] = useState('text-animate');
-  const greetings = 'Hey, there'.split('');
-  const fName = `I'm Corrado`.split('');
-  const job = 'Software Developer'.split('');
-
+  
   useEffect(() => {
-    setTimeout(() => {
-      setLettersAnimation('text-animate-hover')
-    }, 3000);
-  }, [])
+    localStorage.setItem('theme',theme);
+  })
 
   return (
     <>
-      <div className={`${theme} background`}>
+      <div className={`${theme} `}>
         <Navbar theme={theme} toggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
-        <Container theme={theme} />
+        <Container  />
       </div>
 
     </>

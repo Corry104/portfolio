@@ -8,6 +8,8 @@
   }
   .background {
     background-color: $light_background;
+    min-height: 100vh;
+    // min-width: 100vh;
   }
   
 }
@@ -18,6 +20,8 @@
   }
   .background {
     background-color: $dark_background;
+    min-height: 100vh;
+    // min-width: 100vh;
   }
  
 }
