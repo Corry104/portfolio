@@ -1,14 +1,15 @@
 import './animatedLetters.scss';
 
-interface Props {
+interface Params {
     letters:any;
     message:any[];
     idx:number;
 }
 
 
-export const AnimatedLetters: React.FC<Props> = (props:Props) => {
-    const {letters, message, idx} = props;
+export const AnimatedLetters: React.FC<Params> = (params:Params) => {
+    const {letters, message, idx} = params;
+    
     return(
         <span>
             {message.map((char:any, i:number) => {

@@ -1,4 +1,4 @@
-$primary-color: 'ffd700';
+@use './assets/styles/themes/theme.scss' as *;
 
 @import 'animate.css';
 
@@ -25,20 +25,30 @@ $primary-color: 'ffd700';
   font-style: normal;
 }
 
-input,
-textarea {
-  font-family: 'Helvetica Neue', sans-serif;
+
+body,
+#root,
+html {
+  margin: 0;
+  padding: 0;
 }
 
+.light {
+  .text {
+    color: $primary-color;
+  }
+  .background {
+    background-color: $light_background;
+    height: 100vh;
+  }
+}
 
-.loader-active {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  animation: fadeOut 1s 1s;
-  animation-fill-mode: forwards;
+.dark {
+  .text {
+    color: $secondary-color;
+  }
+  .background {
+    background-color: $dark_background;
+    height: 100vh;
+  }
 }
