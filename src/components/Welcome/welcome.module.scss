@@ -1,0 +1,31 @@
+@use '../../assets/styles/themes/theme.scss' as *;
+
+.image-animation {
+  animation: fadeIn 7s;
+  .main-pic {
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 1050px) {
+  .align-center {
+    flex-direction: column;
+  }
+
+  .padding-top-ten {
+    padding-top: 25%;
+  }
+}

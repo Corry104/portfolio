@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.scss';
 import './assets/styles/_main.scss';
-import { Navbar } from './components/Navbar/navbar';
-import { ThemeContext } from './context/ThemeContext';
-import { useContext } from 'react';
-// import { AnimatedLetters } from './components/AnimatedLetters/animatedLetters';
-import { Container } from './components/container/container';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout/layout';
+import { About } from './components/About/about';
+import { Contact } from './components/Contact/contact';
+import { Projects } from './components/Projects/projects';
+import {  Welcome } from './components/Welcome/welcome';
 
 const App: React.FC = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  
-  useEffect(() => {
-    localStorage.setItem('theme',theme);
-  })
 
   return (
     <>
-      <div className={`${theme} `}>
-        <Navbar theme={theme} toggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
-        <Container  />
-      </div>
+    <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route index element={<Welcome />} />
+          <Route path="about" element={<About />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
+          {/* <Route path="letsplay" element={<LetsPlay />} /> */}
+          {/* <Route path="*" element={<NoPage />} /> */}
+        </Route>
+      </Routes>
+      
 
     </>
 

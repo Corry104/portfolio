@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './navbar.module.scss';
 import '../../assets/styles/_main.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faEnvelope, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
 // import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -59,6 +59,9 @@ export const Navbar: React.FC<Params> = (params: Params) => {
                     <NavLink to='/contact' >
                         <FontAwesomeIcon icon={faEnvelope} className={styles['icon']}></FontAwesomeIcon>
                     </NavLink>
+                    {/* <NavLink to='/letsplay' >
+                        <FontAwesomeIcon icon={faEnvelope} className={styles['icon']}></FontAwesomeIcon>
+                    </NavLink> */}
                     {theme === 'dark' ? 
                         <FontAwesomeIcon onClick={toggle} icon={faSun} className={styles['icon']} ></FontAwesomeIcon>
                         :
@@ -66,7 +69,7 @@ export const Navbar: React.FC<Params> = (params: Params) => {
                     }
                 </div>
             </nav>
-
+            <Outlet />
         </>
 
     )

@@ -25,8 +25,6 @@
   font-style: normal;
 }
 
-
-
 .light {
   .text {
     color: $primary-color;
@@ -42,5 +40,27 @@
   }
   .background {
     background-color: $dark_background;
+  }
+}
+
+.row {
+  display: flex;
+
+  &.align-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subtitle {
+    font-size: 55px;
+  }
+}
+
+.paragraph-padding {
+  padding: 10px 30px 10px 30px;
+
+  p {
+    animation: fadeIn 7s;
+    font-size: 20px;
   }
 }
