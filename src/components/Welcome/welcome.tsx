@@ -3,6 +3,7 @@ import { AnimatedLetters } from "../AnimatedLetters/animatedLetters";
 import styles from './welcome.module.scss';
 import businessImg from '../../assets/images/business_pic.jpg';
 import aboutImg from '../../assets/images/about_img.jpg';
+import letsPlayImg from '../../assets/images/letsplay_img.jpg';
 import contactImg from '../../assets/images/contact_img.jpg';
 import projectImg from '../../assets/images/projects_img.jpg';
 import { SpinningCube } from "../SpinningCube/spinningCube";
@@ -24,7 +25,7 @@ export const Welcome: React.FC = () => {
         <>
             <div className={`background text`}>
                 <div className={`row align-center`}>
-                    <div className={`${styles['image-animation']}`}>
+                    <div >
                         <img src={businessImg} alt="business_picture" className={`${styles['main-pic']}`} />
                     </div>
                     <div className={`subtitle`}>
@@ -43,7 +44,7 @@ export const Welcome: React.FC = () => {
 
                     <SpinningCube />
                 </div>
-                <div className={`paragraph-padding`}>
+                <div className={`${styles['paragraph-padding']}`}>
                     <p>
                         I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
@@ -90,7 +91,7 @@ export const Welcome: React.FC = () => {
                     </div>
                     <div>
                         <NavLink to='/letsplay' >
-                            <img src={aboutImg} alt="" width={500} height={300} />
+                            <img src={letsPlayImg} alt="" width={500} height={300} />
                         </NavLink>
                     </div>
                 </div>

@@ -1,5 +1,12 @@
 @use '../themes/theme.scss' as *;
 
+%animation{
+  animation: fadeIn 7s;
+}
+
+%min-height{
+  min-height: 100vh;
+}
 
 
 .light {
@@ -7,11 +14,10 @@
     color: $primary-color;
   }
   .background {
+    @extend %animation;
+    @extend %min-height;
     background-color: $light_background;
-    min-height: 100vh;
-    // min-width: 100vh;
   }
-  
 }
 
 .dark {
@@ -20,9 +26,40 @@
   }
   .background {
     background-color: $dark_background;
-    min-height: 100vh;
-    // min-width: 100vh;
+    @extend %animation;
+    @extend %min-height;
   }
- 
 }
 
+.row {
+  display: flex;
+
+  &.align-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subtitle {
+    font-size: 55px;
+  }
+}
+
+
+p {
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1600px) {
+  .align-center {
+    flex-direction: column;
+  }
+}
