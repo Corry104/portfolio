@@ -17,35 +17,35 @@ interface Params {
 
 export const Navbar: React.FC<Params> = (params: Params) => {
     const { theme, toggle } = params;
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
 
-    useEffect(() => {
-        let previousScrollPosition = 0;
-        let currentScrollPosition = 0;
+    // useEffect(() => {
+    //     let previousScrollPosition = 0;
+    //     let currentScrollPosition = 0;
     
-        window.addEventListener('scroll', function (e) {
+    //     window.addEventListener('scroll', function (e) {
     
-          // Get the new Value
-          currentScrollPosition = window.scrollY;
+    //       // Get the new Value
+    //       currentScrollPosition = window.scrollY;
     
-          //Subtract the two and conclude
-          if (previousScrollPosition - currentScrollPosition < 0) {
-            setShow(false);
-          } else if (previousScrollPosition - currentScrollPosition > 0) {
-            setShow(true);
-          }
+    //       //Subtract the two and conclude
+    //       if (previousScrollPosition - currentScrollPosition < 0) {
+    //         setShow(false);
+    //       } else if (previousScrollPosition - currentScrollPosition > 0) {
+    //         setShow(true);
+    //       }
     
-          // Update the previous value
-          previousScrollPosition = currentScrollPosition;
-        });
-      }, []);
+    //       // Update the previous value
+    //       previousScrollPosition = currentScrollPosition;
+    //     });
+    //   }, []);
 
     return (
 
         <>
             <nav className={`${styles[theme]} `}>
-                <div className={`${styles['active']} ${show && styles['hidden']}`}>
-                {/* <div className={`${styles['active']} `}> */}
+                {/* <div className={`${styles['active']} ${show && styles['locked']}`}> */}
+                <div className={`${styles['active']} `}>
 
                     <NavLink to='/' >
                         <FontAwesomeIcon icon={faHome} className={styles['icon']}></FontAwesomeIcon>

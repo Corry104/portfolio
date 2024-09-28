@@ -51,11 +51,12 @@ export const Contact: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className={`${styles['paragraph-padding']}`}>
+                <div className={'paragraph-padding'}>
                     <p>
-                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
+                        Let's get in touch! 
+                    </p>
+                    <p>
+                        Make sure to fill out all the fields with your correct information, shoot me a message and I will get back to you promptly!
                     </p>
                 </div>
 

@@ -17,13 +17,12 @@
 
   &:hover {
     animation: rubberBand 1s;
-    color: $primary-color;
     cursor: pointer;
   }
 }
 
 @for $i from 1 through 45 {
   .text-animate._#{$i} {
-    animation-delay: #{$i / 15}s;
+    animation-delay: #{calc($i / 15)}s;
   }
 }

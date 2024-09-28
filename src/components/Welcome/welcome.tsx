@@ -15,6 +15,8 @@ export const Welcome: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
     const greetings = 'Hey there,  nice meeting you'.split('');
     const fName = `I'm Corrado`.split('');
+    const img_width = 500;
+    const img_height = 300;
 
     useEffect(() => {
         setTimeout(() => {
@@ -44,54 +46,43 @@ export const Welcome: React.FC = () => {
 
                     <SpinningCube />
                 </div>
-                <div className={`${styles['paragraph-padding']}`}>
+                <div className={'paragraph-padding'}>
                     <p>
                         I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-                        vv
-
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-                        v
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-                        vv
-
+                        I am a problem solver, a team player, highly disciplined and very result driven. 
+                        In my experience there are successful track records of looking at requirements, putting together estimates, and delivering projects successfully and on schedule.                         
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-                        v
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus numquam ut blanditiis in labore. Iste, culpa sit aliquam provident odit corrupti id quo. Neque amet possimus tenetur quisquam dolore.
-                        vv
-
+                    As part of my duties, I provided enhancements to software, mobile applications, and websites. 
+                        I create logic approaches and provide immediate solutions to unexpected problems.
+                        As a Software Developer, my goal is to continuously increase my programming skills to present better solutions to my employers and their clients.
                     </p>
                 </div>
 
 
                 <div className={`row align-center`}>
-                    <div>
+                    <div className={'paragraph-padding'}>
                         <NavLink to='/about' >
-                            <img src={aboutImg} alt="" width={500} height={300} />
+                            <img src={aboutImg} alt="" width={img_width} height={img_height} />
                         </NavLink>
                     </div>
                     <div>
                         <NavLink to='/projects' >
-                            <img src={projectImg} alt="" width={500} height={300} />
+                            <img src={projectImg} alt="" width={img_width} height={img_height} />
                         </NavLink>
                     </div>
                 </div>
                 <div className={`row align-center`}>
-                    <div>
-                        <NavLink to='/contact' >
-                            <img src={contactImg} alt="" width={500} height={300} />
+                <div className={'paragraph-padding'}>
+                <NavLink to='/contact' >
+                            <img src={contactImg} alt="" width={img_width} height={img_height} />
                         </NavLink>
                     </div>
                     <div>
                         <NavLink to='/letsplay' >
-                            <img src={letsPlayImg} alt="" width={500} height={300} />
+                            <img src={letsPlayImg} alt="" width={img_width} height={img_height} />
                         </NavLink>
                     </div>
                 </div>
