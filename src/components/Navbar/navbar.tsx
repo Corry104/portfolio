@@ -21,7 +21,7 @@ export const Navbar: React.FC<Params> = (params: Params) => {
                 {/* <div className={`${styles['active']} ${show && styles['locked']}`}> */}
                 <div className={`${styles['locked']} `}>
 
-                    <NavLink to='/' >
+                    <NavLink to='/home' >
                         <FontAwesomeIcon icon={faHome} className={styles['icon']}></FontAwesomeIcon>
                     </NavLink>
                     <NavLink to='/about' >
