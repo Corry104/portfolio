@@ -7,7 +7,6 @@ import { About } from './components/About/about';
 import { Contact } from './components/Contact/contact';
 import { Projects } from './components/Projects/projects';
 import {  Welcome } from './components/Welcome/welcome';
-import { NoPage } from './components/404/noPage';
 
 const App: React.FC = () => {
 
@@ -20,7 +19,7 @@ const App: React.FC = () => {
           <Route path="projects" element={<Projects />} />
           <Route path="contact" element={<Contact />} />
           {/* <Route path="letsplay" element={<LetsPlay />} /> */}
-          <Route path="*" element={<NoPage />} />
+          {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>
       
