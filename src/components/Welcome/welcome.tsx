@@ -8,6 +8,7 @@ import contactImg from '../../assets/images/contact_img.jpg';
 import projectImg from '../../assets/images/projects_img.jpg';
 import { SpinningCube } from "../SpinningCube/spinningCube";
 import { NavLink } from "react-router-dom";
+import { Hourglass } from "react-loader-spinner";
 
 
 
@@ -86,7 +87,14 @@ export const Welcome: React.FC = () => {
                         </NavLink>
                     </div>
                 </div>
-
+                <Hourglass
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="hourglass-loading"
+                    wrapperClass="loader-active"
+                    colors={['#306cce', '#72a1ed']}
+                />
             </div>
         </>
 

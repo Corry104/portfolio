@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatedLetters } from "../AnimatedLetters/animatedLetters"
+import { Vortex } from "react-loader-spinner";
 
 
 export const Projects: React.FC = () => {
@@ -24,6 +25,14 @@ export const Projects: React.FC = () => {
 
                 </div>
             </div>
+            <Vortex
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="vortex-loading"
+                wrapperClass="loader-active"
+                colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
+            />
         </div>
     )
 }

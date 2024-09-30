@@ -51,6 +51,7 @@
 
 p {
   font-size: 20px;
+  @extend %animation;
 }
 
 @keyframes fadeIn {

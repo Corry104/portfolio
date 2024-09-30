@@ -4,6 +4,7 @@ import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
 import emailjs from '@emailjs/browser';
 import { Map } from '../Map/map';
 import { Modal } from '../Modal/modal';
+import { Comment } from 'react-loader-spinner';
 
 export const Contact: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
@@ -143,6 +144,15 @@ export const Contact: React.FC = () => {
                     : null
                     }
                 </div>
+                <Comment
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="comment-loading"
+                    wrapperClass="loader-active"
+                    color="#fff"
+                    backgroundColor="#F4442E"
+                />
             </div>
         </>
     )
