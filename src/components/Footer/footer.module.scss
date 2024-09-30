@@ -1,0 +1,33 @@
+@use '../../assets/styles/themes/theme.scss' as *;
+
+.light {
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light_background;
+    list-style-type: none;
+  }
+  .icon{
+    font-size: 16px;
+    color: $primary-color;
+    padding: 10px;
+  }
+}
+
+.dark {
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark_background;
+    list-style-type: none;
+  }
+  .icon{
+    font-size: 16px;
+    color: $secondary-color;
+    padding: 10px;
+  }
+}

@@ -3,10 +3,14 @@ import styles from './contact.module.scss';
 import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
 import emailjs from '@emailjs/browser';
 import { Map } from '../Map/map';
+import { Modal } from '../Modal/modal';
 
 export const Contact: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
     const [emailTemplate, setEmailTemplate] = useState({ name: '', email: '', subject: '', message: '' });
+    const [commonModal, setCommonModal] = useState(false);
+    const [modalMessage, setModalMessage] = useState(String);
+    const [modalTitle, setModalTitle] = useState(String);
     const refForm = useRef<HTMLFormElement>(null);
     const contactMe = 'Contact Me'.split('');
     const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
@@ -25,14 +29,21 @@ export const Contact: React.FC = () => {
         emailjs
             .send(SERVICE_ID, TEMPLATE_ID_, emailTemplate, PUBLIC_KEY)
             .then((res: any) => {
-                console.log("🚀 ~ .then ~ res:", res)
-                alert('Email sent succesfully - ')
-                // window.location.reload();
-                setEmailTemplate({ name: '', email: '', subject: '', message: '' })
+                if(res['status'] === 200){
+                    setModalTitle('Confirmed!');
+                    setModalMessage('Your email was succesfully sent!');
+                }
+                else {
+                    setModalTitle('Attention!');
+                    setModalMessage('Our apologies. Something went wrong. Please try again later.');
+                }     
+                setCommonModal(true);
+                setEmailTemplate({ name: '', email: '', subject: '', message: '' });
 
             }, (error: any) => {
-                console.log("🚀 ~ .then ~ error:", error)
-
+                setModalTitle('Attention!');
+                setModalMessage(error);
+                setCommonModal(true);
             })
 
     }
@@ -122,6 +133,15 @@ export const Contact: React.FC = () => {
                         </form>
                     </div>
                     <Map />
+                    {commonModal ? 
+                        <Modal 
+                            title={modalTitle}
+                            description={modalMessage}
+                            isOpen={commonModal}
+                            onClose={() => setCommonModal(false)}
+                        />                
+                    : null
+                    }
                 </div>
             </div>
         </>

@@ -1,16 +1,11 @@
 @use '../../assets/styles/themes/theme.scss' as *;
 
-
-
 .light {
-  .active {
+  .locked {
     height: 2rem;
     position: fixed;
     width: 100%;
     top: 0px;
-    // position: fixed;
-    // top: 0px;
-    // transition: 0.3s linear;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -18,64 +13,27 @@
     border-bottom: 1px solid $blue-400;
     box-shadow: 0 2px 5px -1px $blue-400;
   }
-  // .hidden {
-  //   height: 2rem;
-  //   width: 100%;
-  //   z-index: 40;
-  //   border-bottom: 1px solid $blue-400;
-  //   box-shadow: 0 2px 5px -1px $blue-400;
-  //   position: fixed;
-  //   // top: -80px;
-  //   transition: 0.3s linear;
-  // }
-
-  .locked {
-    position: fixed;
-    width: 100%;
-    top: 0px;
-
-  }
-  .icon{
+  .icon {
     font-size: 16px;
     color: $primary-color;
   }
 }
 
 .dark {
-  .active {
+  .locked {
     height: 2rem;
     width: 100%;
     position: fixed;
-     width: 100%;
-     top: 0;
-    // position: fixed;
-    // top: 0px;
-    // transition: 0.3s linear;
+    width: 100%;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: $dark_background;
     border-bottom: 1px solid $red-400;
     box-shadow: 0 2px 5px -1px $red-400;
-    
   }
-  .locked {
-    position: fixed;
-    width: 100%;
-    top: 0px;
-
-  }
-  // .hidden {
-  //   height: 2rem;
-  //   width: 100%;
-  //   z-index: 40;
-  //   border-bottom: 1px solid $red-400;
-  //   box-shadow: 0 2px 5px -1px $red-400;
-  //   // position: fixed;
-  //   // top: -80px;
-  //   transition: 0.3s linear;
-  // }
-  .icon{
+  .icon {
     font-size: 16px;
     color: $secondary-color;
   }

@@ -51,11 +51,11 @@ export const Welcome: React.FC = () => {
                         I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
                     </p>
                     <p>
-                        I am a problem solver, a team player, highly disciplined and very result driven. 
-                        In my experience there are successful track records of looking at requirements, putting together estimates, and delivering projects successfully and on schedule.                         
+                        I am a problem solver, a team player, highly disciplined and very result driven.
+                        In my experience there are successful track records of looking at requirements, putting together estimates, and delivering projects successfully and on schedule.
                     </p>
                     <p>
-                    As part of my duties, I provided enhancements to software, mobile applications, and websites. 
+                        As part of my duties, I provided enhancements to software, mobile applications, and websites.
                         I create logic approaches and provide immediate solutions to unexpected problems.
                         As a Software Developer, my goal is to continuously increase my programming skills to present better solutions to my employers and their clients.
                     </p>
@@ -75,8 +75,8 @@ export const Welcome: React.FC = () => {
                     </div>
                 </div>
                 <div className={`row align-center`}>
-                <div className={'paragraph-padding'}>
-                <NavLink to='/contact' >
+                    <div className={'paragraph-padding'}>
+                        <NavLink to='/contact' >
                             <img src={contactImg} alt="" width={img_width} height={img_height} />
                         </NavLink>
                     </div>
