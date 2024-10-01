@@ -2,7 +2,7 @@ import styles from './navbar.module.scss';
 import '../../assets/styles/_main.scss';
 import { NavLink, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faEnvelope, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faEnvelope, faGamepad, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Footer } from '../Footer/footer';
 
 
@@ -18,9 +18,7 @@ export const Navbar: React.FC<Params> = (params: Params) => {
 
         <>
             <nav className={`${styles[theme]} `}>
-                {/* <div className={`${styles['active']} ${show && styles['locked']}`}> */}
                 <div className={`${styles['locked']} `}>
-
                     <NavLink to='/' >
                         <FontAwesomeIcon icon={faHome} className={styles['icon']}></FontAwesomeIcon>
                     </NavLink>
@@ -33,9 +31,9 @@ export const Navbar: React.FC<Params> = (params: Params) => {
                     <NavLink to='/contact' >
                         <FontAwesomeIcon icon={faEnvelope} className={styles['icon']}></FontAwesomeIcon>
                     </NavLink>
-                    {/* <NavLink to='/letsplay' >
-                        <FontAwesomeIcon icon={faEnvelope} className={styles['icon']}></FontAwesomeIcon>
-                    </NavLink> */}
+                    <NavLink to='/letsplay' >
+                        <FontAwesomeIcon icon={faGamepad} className={styles['icon']}></FontAwesomeIcon>
+                    </NavLink>
                     {theme === 'dark' ? 
                         <FontAwesomeIcon onClick={toggle} icon={faSun} className={styles['icon']} ></FontAwesomeIcon>
                         :
