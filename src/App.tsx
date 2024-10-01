@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.scss';
 import './assets/styles/_main.scss';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout/layout';
 import { About } from './components/About/about';
 import { Contact } from './components/Contact/contact';
@@ -11,9 +11,19 @@ import { LetsPlay } from './components/LetsPlay/letsplay';
 import { NoPage } from './components/404/noPage';
 
 const App: React.FC = () => {
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
 
   return (
     <>
+    <ScrollToTop />
     <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Welcome />} />

@@ -22,6 +22,7 @@ export const Contact: React.FC = () => {
         setTimeout(() => {
             setLettersAnimation('text-animate-hover')
         }, 3000);
+        
     }, [])
 
     const sendEmail = (e: any) => {
