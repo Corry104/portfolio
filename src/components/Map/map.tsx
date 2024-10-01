@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from './map.module.scss';
 import { MapContainer, Marker, TileLayer, Popup, useMapEvents } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';

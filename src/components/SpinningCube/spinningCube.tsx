@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './spinningCube.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
+import { faAngular, faGitAlt, faHtml5, faJsSquare, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
 
 
 export const SpinningCube: React.FC = () => {
