@@ -1,9 +1,8 @@
 import styles from './navbar.module.scss';
 import '../../assets/styles/_main.scss';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faEnvelope, faGamepad, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
-import { Footer } from '../Footer/footer';
 
 
 interface Params {
@@ -41,8 +40,7 @@ export const Navbar: React.FC<Params> = (params: Params) => {
                     }
                 </div>
             </nav>
-            <Outlet />
-            <Footer theme={theme} />
+            
         </>
 
     )
