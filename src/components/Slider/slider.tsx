@@ -29,8 +29,8 @@ export const Carousel: React.FC<Params> = (params:Params) => {
                 {img.length > 0 ?
                     img.map((el:any) => {
                         return (
-                            <div>
-                                <img src={el} alt="" width={width} height={height} />
+                            <div >
+                                <img className={`${styles['img-spacing']}`} src={el} alt="" width={width} height={height} />
                             </div>
                         )
                     })
