@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './modal.module.scss';
 
+/** Defined props for dialogs */
 interface Params {
     title: string,
     description: string,

@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import styles from './slider.module.scss';
 
+/** Defined props for Carousel */
 interface Params {
     title: string,
     img: string[],

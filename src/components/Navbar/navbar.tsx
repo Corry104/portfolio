@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faEnvelope, faGamepad, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
 
-
+/** Defined props for NavBar */
 interface Params {
     theme: any,
     toggle: ()=>{}

@@ -1,5 +1,6 @@
 import './animatedLetters.scss';
 
+/** Define props for Animated Letters */
 interface Params {
     letters:any;
     message:any[];
