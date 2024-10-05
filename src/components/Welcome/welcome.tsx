@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatedLetters } from "../AnimatedLetters/animatedLetters";
-import styles from './welcome.module.scss';
+import './welcome.scss';
 import businessImg from '../../assets/images/business_pic.jpg';
 import aboutImg from '../../assets/images/about_img.jpg';
 import letsPlayImg from '../../assets/images/letsplay_img.jpg';
@@ -27,9 +27,9 @@ export const Welcome: React.FC = () => {
     return (
         <>
             <div className={`background text`}>
-                <div className={`row align-center`}>
+                <div className={`row align-center padding-thirty`}>
                     <div >
-                        <img src={businessImg} alt="business_picture" className={`${styles['main-pic']}`} />
+                        <img src={businessImg} alt="business_picture" className={`main-pic`} />
                     </div>
                     <div className={`subtitle`}>
                         <AnimatedLetters
@@ -47,7 +47,7 @@ export const Welcome: React.FC = () => {
 
                     <SpinningCube />
                 </div>
-                <div className={'paragraph-padding'}>
+                <div className={'paragraph-padding welcome-paragraph-pad-top'}>
                     <p>
                         I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
                     </p>
@@ -64,27 +64,39 @@ export const Welcome: React.FC = () => {
 
 
                 <div className={`row align-center`}>
-                    <div className={'paragraph-padding'}>
+                    <div className={`img-lay`}>
                         <NavLink to='/about' >
-                            <img src={aboutImg} alt="" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={aboutImg} alt="about" width={img_width} height={img_height} />
                         </NavLink>
+                        <div className={`img-text text`}>
+                            <p>ABOUT</p>
+                        </div>
                     </div>
-                    <div>
+                    <div className={`img-lay`}>
                         <NavLink to='/projects' >
-                            <img src={projectImg} alt="" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={projectImg} alt="projects" width={img_width} height={img_height} />
                         </NavLink>
+                        <div className={`img-text text`}>
+                            <p>PROJECTS</p>
+                        </div>
                     </div>
                 </div>
                 <div className={`row align-center`}>
-                    <div className={'paragraph-padding'}>
+                    <div className={`img-lay`}>
                         <NavLink to='/contact' >
-                            <img src={contactImg} alt="" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={contactImg} alt="contact" width={img_width} height={img_height} />
                         </NavLink>
+                        <div className={`img-text text`}>
+                            <p>CONTACT</p>
+                        </div>
                     </div>
-                    <div>
+                    <div className={`img-lay`}>
                         <NavLink to='/letsplay' >
-                            <img src={letsPlayImg} alt="" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={letsPlayImg} alt="letsplay" width={img_width} height={img_height} />
                         </NavLink>
+                        <div className={`img-text text`}>
+                            <p>LET'S PLAY</p>
+                        </div>
                     </div>
                 </div>
                 <Hourglass

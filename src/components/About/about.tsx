@@ -16,7 +16,7 @@ export const About: React.FC = () => {
     return (
         <>
             <div className={`background text`}>
-                <div className={`row align-center`}>
+                <div className={`row align-center padding-thirty`}>
                     <div className={`subtitle`}>
                         <AnimatedLetters
                             letters={lettersAnimation}
@@ -29,7 +29,7 @@ export const About: React.FC = () => {
                 <div className={'paragraph-padding'}>
                     <p>
                         My work and education history is quite unique, they have been some major changes in my career.
-                        I have started in the luxury hotel and high-end restaurant business to eventually, due to private family reason, make a full switch into the IT world and more specifically, Software Development by obtaining a certification in Full Stack Web Development at the University of California Los Angeles (Go Bruins!!) Extension in Los Angeles.
+                        I have started in the luxury hotel and high-end restaurant business to eventually, due to private family reason, make a full switch into the IT world and more specifically, Software Development by obtaining a certification in Full Stack Web Development at the University of California Los Angeles, Go Bruins!!
                     </p>
                     <p>
                         I have a natural ability to rewire myself and adapt in change of circumstances with a strong will to succeed in any of the challenges I am facing and I pride myself as a logical and creative thinker who enjoys learning new languages, frameworks and technologies.

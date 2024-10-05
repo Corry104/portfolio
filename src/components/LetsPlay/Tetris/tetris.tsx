@@ -16,10 +16,13 @@ export const Tetris: React.FC = () => {
             }
         </div>
         <div className={`container`}>
-            <h1>Tetris</h1>
+            {isPlaying ?
+                <h1>Score: {score}</h1>
+                :
+                <h1>Tetris</h1>
+            }
             <Board currentBoard={board} />
             <div className={`controls`}>
-                <h2>Score: {score}</h2>
                 {isPlaying ? (<UpcomingBlocks upcomingBlocks={upcomingBlocks} />) : null}
 
             </div>

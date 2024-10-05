@@ -1,4 +1,4 @@
-import styles from './footer.module.scss';
+import './footer.scss';
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -12,16 +12,16 @@ export const Footer: React.FC<Params> = (params: Params) => {
 
     return (
         <>
-            <div className={`${styles[theme]} `}>
-                <div className={styles['footer']}>
+            <div className={theme}>
+                <div className={`footer`}>
                         <li>
                             <a href="https://www.linkedin.com/in/corradoalfano/" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faLinkedin} className={styles['icon']}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faLinkedin} className={`icon`}></FontAwesomeIcon>
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/Corry104" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faGithub} className={styles['icon']}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faGithub} className={`icon`}></FontAwesomeIcon>
                             </a>
                         </li>
                 </div>

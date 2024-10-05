@@ -16,7 +16,7 @@ export const LetsPlay: React.FC = () => {
 
     return (
         <div className={`background text`}>
-            <div className={`row align-center`}>
+            <div className={`row align-center padding-thirty`}>
                 <div className={`subtitle`}>
                     <AnimatedLetters
                         letters={lettersAnimation}
@@ -30,7 +30,7 @@ export const LetsPlay: React.FC = () => {
                     I don't know about you but I love gaming! So here is a game of Tetris for you to enjoy. Have fun!! 
                 </p>
                 <p>
-                    Disclaimer: The game can only be played with a keyboard. Thank you for understanding!
+                    Disclaimer: The game can only be played using a keyboard. Thank you for understanding!
                 </p>
                 
 

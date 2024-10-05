@@ -63,7 +63,7 @@ export const Contact: React.FC = () => {
     return (
         <>
             <div className={`background text`}>
-                <div className={`row align-center`}>
+                <div className={`row align-center padding-thirty`}>
                     <div className={`subtitle`}>
                         <AnimatedLetters
                             letters={lettersAnimation}
@@ -150,6 +150,7 @@ export const Contact: React.FC = () => {
                             description={modalMessage}
                             isOpen={commonModal}
                             onClose={() => setCommonModal(false)}
+                            btnText={'close'}
                         />                
                     : null
                     }

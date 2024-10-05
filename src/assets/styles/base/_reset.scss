@@ -12,6 +12,8 @@
 .light {
   .text {
     color: $primary-color;
+    font-family: 'Helvetica Neue';
+    letter-spacing: 1px;
   }
   .background {
     @extend %animation;
@@ -23,6 +25,8 @@
 .dark {
   .text {
     color: $secondary-color;
+    font-family: 'Helvetica Neue';
+    letter-spacing: 1px;
   }
   .background {
     background-color: $dark_background;
@@ -33,19 +37,31 @@
 
 .row {
   display: flex;
-  padding: 30px;
   &.align-center {
     justify-content: center;
     align-items: center;
   }
-
+  
   .subtitle {
     font-size: 55px;
+    font-family: 'La Belle Aurore';
+    @extend %animation;
+    &::before {
+      content: '<h1>';
+    }
+    &::after {
+      content: '</h1>';
+    }
   }
+}
+
+.padding-thirty {
+  padding: 30px;
 }
 
 .paragraph-padding {
   padding: 10px 30px 10px 30px;
+  
 }
 
 .float-right {
@@ -68,6 +84,14 @@
 p {
   font-size: 22px;
   @extend %animation;
+  &::before {
+    content: '<div>';
+    font-family: 'La Belle Aurore';
+  }
+  &::after {
+    content: '</div>';
+    font-family: 'La Belle Aurore';
+  }
 }
 
 @keyframes fadeIn {
@@ -87,7 +111,7 @@ p {
 
 
 @media (max-width: 1050px) {
-  .paragraph-padding {
+  .welcome-paragraph-pad-top {
     padding-top: 25%;
   }
 }

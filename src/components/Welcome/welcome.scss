@@ -1,0 +1,52 @@
+@use '../../assets/styles/themes/theme.scss' as *;
+
+.main-pic {
+  padding: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+.img-lay {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.img-lay .img-space {
+  padding: 0;
+  display: block;
+  opacity: 1;
+}
+
+.img-lay .img-space .img-text {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.img-lay:hover .img-space {
+  opacity: 0.2;
+}
+
+.img-lay:hover .img-text {
+  opacity: 1;
+}
+
+.img-text {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+}
+
+.img-space {
+  padding: 5px;
+}
+
+img {
+  border-radius: 25px;
+}

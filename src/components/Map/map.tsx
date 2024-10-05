@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from './map.module.scss';
+import './map.scss';
 import { MapContainer, Marker, TileLayer, Popup, useMapEvents } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 import Leaflet from 'leaflet';
@@ -70,7 +70,7 @@ export const Map: React.FC = () => {
                 zoom={13}
                 minZoom={3}
                 scrollWheelZoom={true}
-                className={`${styles['map-container']} `}
+                className={`map-container`}
             >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

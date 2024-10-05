@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './spinningCube.module.scss';
+import './spinningCube.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngular, faGitAlt, faHtml5, faJsSquare, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
 
@@ -7,24 +7,24 @@ import { faAngular, faGitAlt, faHtml5, faJsSquare, faReact, faSass } from "@fort
 export const SpinningCube: React.FC = () => {
     return (
         <>
-            <div className={`${styles['stage-cube-cont']}`}>
-                <div className={`${styles["cubespinner"]}`}>
-                    <div className={`${styles['face1']}`}>
+            <div className={`stage-cube-cont`}>
+                <div className={`cubespinner`}>
+                    <div className={`face1`}>
                         <FontAwesomeIcon icon={faAngular} color="#DD0031" />
                     </div>
-                    <div className={`${styles['face2']}`}>
+                    <div className={`face2`}>
                         <FontAwesomeIcon icon={faHtml5} color="#F06529" />
                     </div>
-                    <div className={`${styles['face3']}`}>
+                    <div className={`face3`}>
                         <FontAwesomeIcon icon={faSass} color="#28A4D9" />
                     </div>
-                    <div className={`${styles['face4']}`}>
+                    <div className={`face4`}>
                         <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
                     </div>
-                    <div className={`${styles['face5']}`}>
+                    <div className={`face5`}>
                         <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
                     </div>
-                    <div className={`${styles['face6']}`}>
+                    <div className={`face6`}>
                         <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
                     </div>
                 </div>

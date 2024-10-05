@@ -1,16 +1,17 @@
 import React, { useEffect, useRef } from 'react';
-import styles from './modal.module.scss';
+import './modal.scss';
 
 /** Defined props for dialogs */
 interface Params {
     title: string,
     description: string,
     isOpen: boolean,
-    onClose: () => void
+    onClose: () => void,
+    btnText: string
 }
 
 export const Modal: React.FC<Params> = (params: Params) => {
-    const { title, description, isOpen, onClose } = params;
+    const { title, description, isOpen, onClose, btnText } = params;
     const modalRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -34,12 +35,12 @@ export const Modal: React.FC<Params> = (params: Params) => {
 
     return (
         <>
-            <div className={styles['modal-overlay']} onClick={() => handleClickOutside}>
-                <div className={styles['modal-content']} ref={modalRef}>
-                    <h2 className={styles['modal-title']}>{title}</h2>
+            <div className={'modal-overlay'} onClick={() => handleClickOutside}>
+                <div className={'modal-content'} ref={modalRef}>
+                    <h2 className={'modal-title'}>{title}</h2>
                     <p>{description}</p>
-                    <button className={`${styles['close-button']} text`} onClick={onClose}>
-                        Close
+                    <button className={`close-button text`} onClick={onClose}>
+                        {btnText}
                     </button>
 
                 </div>

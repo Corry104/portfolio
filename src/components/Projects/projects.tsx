@@ -27,7 +27,7 @@ export const Projects: React.FC = () => {
 
     return (
         <div className={`background text`}>
-            <div className={`row align-center`}>
+            <div className={`row align-center padding-thirty`}>
                 <div className={`subtitle`}>
                     <AnimatedLetters
                         letters={lettersAnimation}
