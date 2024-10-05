@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a9562f94.css",
-    "main.js": "/portfolio/static/js/main.5e11b993.js",
+    "main.css": "/portfolio/static/css/main.cc8c9253.css",
+    "main.js": "/portfolio/static/js/main.a5a9995a.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/projects_img.jpg": "/portfolio/static/media/projects_img.b44c20eaf04d2d545173.jpg",
     "static/media/letsplay_img.jpg": "/portfolio/static/media/letsplay_img.2675c542574bb9aa3df1.jpg",
     "static/media/contact_img.jpg": "/portfolio/static/media/contact_img.986f355f45f06dd97ae2.jpg",
-    "static/media/about_img.jpg": "/portfolio/static/media/about_img.12ebe6dfd7c3a96c51d9.jpg",
     "static/media/mobile_appStore.png": "/portfolio/static/media/mobile_appStore.cf08892a6b92918447b2.png",
     "static/media/mobile_appStore_handbook.png": "/portfolio/static/media/mobile_appStore_handbook.5150e0bb5e76b03d32ab.png",
     "static/media/hughesnet_web_handbook.png": "/portfolio/static/media/hughesnet_web_handbook.a5b0498ad60266bbd7f7.png",
@@ -15,6 +14,7 @@
     "static/media/mobile_appStore_support.png": "/portfolio/static/media/mobile_appStore_support.03bc174b0aa64f681a6e.png",
     "static/media/mobile_appStore_account.png": "/portfolio/static/media/mobile_appStore_account.a7ba7af56c569e72935d.png",
     "static/media/hughesnet_web_mainPage.png": "/portfolio/static/media/hughesnet_web_mainPage.2ab4fecef4b4f2685c72.png",
+    "static/media/about_img.jpg": "/portfolio/static/media/about_img.11fd7b3af6feb6156d7e.jpg",
     "static/media/hughesnet_web_chat.png": "/portfolio/static/media/hughesnet_web_chat.23b089310192297863f5.png",
     "static/media/helvetica-neu.ttf": "/portfolio/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
     "static/media/LaBelleAurore.woff": "/portfolio/static/media/LaBelleAurore.9c5433c64baa43d1d274.woff",
@@ -22,12 +22,12 @@
     "static/media/CoolveticaRg-Regular.woff": "/portfolio/static/media/CoolveticaRg-Regular.8307bfa187bccdc55f4d.woff",
     "static/media/CoolveticaRg-Regular.woff2": "/portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/portfolio/index.html",
-    "main.a9562f94.css.map": "/portfolio/static/css/main.a9562f94.css.map",
-    "main.5e11b993.js.map": "/portfolio/static/js/main.5e11b993.js.map",
+    "main.cc8c9253.css.map": "/portfolio/static/css/main.cc8c9253.css.map",
+    "main.a5a9995a.js.map": "/portfolio/static/js/main.a5a9995a.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9562f94.css",
-    "static/js/main.5e11b993.js"
+    "static/css/main.cc8c9253.css",
+    "static/js/main.a5a9995a.js"
   ]
 }
