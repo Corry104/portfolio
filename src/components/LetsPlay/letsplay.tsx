@@ -25,9 +25,17 @@ export const LetsPlay: React.FC = () => {
                     />
                 </div>
             </div>
-            <div className={`row align-center`}>
-                <Tetris />
+            <div className={'paragraph-padding'}>
+                <p>
+                    I don't know about you but I love gaming! So here is a game of Tetris for you to enjoy. Have fun!! 
+                </p>
+                <p>
+                    Disclaimer: The game can only be played with a keyboard. Thank you for understanding!
+                </p>
+                
+
             </div>
+            <Tetris />
         </div>
     )
 } 

@@ -34,18 +34,10 @@
     min-height: 150px;
   }
 
-  .flat-button {
-    font-size: 15px;
-    letter-spacing: 3px;
-    text-decoration: none;
-    padding: 8px 10px;
-    border-radius: 4px;
-    border: 1px solid $dark-200;
-    text-transform: uppercase;
-    float: right;
-    text-align: center;
-    cursor: pointer;
+  .error {
+    color: $red-800;
   }
+
 }
 
 

@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from './contact.module.scss';
+import './contact.scss';
 import { AnimatedLetters } from '../AnimatedLetters/animatedLetters';
 import emailjs from '@emailjs/browser';
 import { Map } from '../Map/map';
 import { Modal } from '../Modal/modal';
 import { Comment } from 'react-loader-spinner';
+import { validateEmail } from '../../utils/utils';
 
 export const Contact: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
     const [emailTemplate, setEmailTemplate] = useState({ name: '', email: '', subject: '', message: '' });
+    const [errorMessage, setErrorMessage] = useState(String);
     const [commonModal, setCommonModal] = useState(false);
     const [modalMessage, setModalMessage] = useState(String);
     const [modalTitle, setModalTitle] = useState(String);
@@ -28,25 +30,31 @@ export const Contact: React.FC = () => {
     const sendEmail = (e: any) => {
         e.preventDefault();
 
-        emailjs
-            .send(SERVICE_ID, TEMPLATE_ID_, emailTemplate, PUBLIC_KEY)
-            .then((res: any) => {
-                if(res['status'] === 200){
-                    setModalTitle('Confirmed!');
-                    setModalMessage('Your email was succesfully sent!');
-                }
-                else {
+        console.log('email template ', validateEmail(emailTemplate['email']) )
+        if(!validateEmail(emailTemplate['email'])){
+            setErrorMessage('Please enter a valid e-mail address.')
+        }
+        else {
+            emailjs
+                .send(SERVICE_ID, TEMPLATE_ID_, emailTemplate, PUBLIC_KEY)
+                .then((res: any) => {
+                    if(res['status'] === 200){
+                        setModalTitle('Confirmed!');
+                        setModalMessage('Your email was succesfully sent!');
+                    }
+                    else {
+                        setModalTitle('Attention!');
+                        setModalMessage('Our apologies. Something went wrong. Please try again later.');
+                    }     
+                    setCommonModal(true);
+                    setEmailTemplate({ name: '', email: '', subject: '', message: '' });
+                    setErrorMessage('');
+                }, (error: any) => {
                     setModalTitle('Attention!');
-                    setModalMessage('Our apologies. Something went wrong. Please try again later.');
-                }     
-                setCommonModal(true);
-                setEmailTemplate({ name: '', email: '', subject: '', message: '' });
-
-            }, (error: any) => {
-                setModalTitle('Attention!');
-                setModalMessage(error);
-                setCommonModal(true);
-            })
+                    setModalMessage(error);
+                    setCommonModal(true);
+                })
+        }
 
     }
 
@@ -74,7 +82,7 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div className={`row align-center`}>
-                    <div className={`${styles['contact-form']}`}>
+                    <div className={`contact-form`}>
                         <form ref={refForm} onSubmit={sendEmail}>
                             <ul>
                                 <li>
@@ -102,6 +110,7 @@ export const Contact: React.FC = () => {
                                         value={emailTemplate['email']}
                                         required
                                     />
+                                    {errorMessage ? <div className={`error`}>{errorMessage}</div> : null}
                                 </li>
                                 <li>
                                     <input
@@ -129,7 +138,7 @@ export const Contact: React.FC = () => {
                                     ></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" className={`${styles['flat-button']} text`} value="SEND" />
+                                    <input type="submit" className={`flat-button float-right text`} value="SEND" />
                                 </li>
                             </ul>
                         </form>

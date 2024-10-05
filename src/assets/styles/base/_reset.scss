@@ -48,9 +48,25 @@
   padding: 10px 30px 10px 30px;
 }
 
+.float-right {
+  float: right;
+}
+
+.flat-button {
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid $dark-200;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
 
 p {
-  font-size: 20px;
+  font-size: 22px;
   @extend %animation;
 }
 
@@ -66,5 +82,12 @@ p {
 @media (max-width: 1600px) {
   .align-center {
     flex-direction: column;
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .paragraph-padding {
+    padding-top: 25%;
   }
 }
