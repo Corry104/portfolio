@@ -61,7 +61,16 @@
 
 .paragraph-padding {
   padding: 10px 30px 10px 30px;
-  
+  &::before {
+    content: '<div>';
+    font-size: 25px;
+    font-family: 'La Belle Aurore';
+  }
+  &::after {
+    content: '</div>';
+    font-family: 'La Belle Aurore';
+    font-size: 25px;
+  }
 }
 
 .float-right {
@@ -85,12 +94,12 @@ p {
   font-size: 22px;
   @extend %animation;
   &::before {
-    content: '<div>';
+    content: '<p>';
     font-family: 'La Belle Aurore';
   }
   &::after {
-    content: '</div>';
     font-family: 'La Belle Aurore';
+    content: '</p>';
   }
 }
 

@@ -5,7 +5,7 @@ import { FidgetSpinner } from "react-loader-spinner";
 
 export const About: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
-    const aboutMe = 'Allow me to introduce myself..'.split('');
+    const aboutMe = 'Allow me to introduce myself...'.split('');
 
     useEffect(() => {
         setTimeout(() => {
@@ -23,7 +23,6 @@ export const About: React.FC = () => {
                             message={aboutMe}
                             idx={15}
                         />
-
                     </div>
                 </div>
                 <div className={'paragraph-padding'}>
@@ -36,14 +35,15 @@ export const About: React.FC = () => {
                         My analytical skills, education, and passion are crucial to be one step ahead in this ever evolving technological industry. My stellar organisational skills are essential to keep code DRY as re-factored as possible.
                     </p>
                     <p>
-                        The gratification of solving problems is what drives me to be a better programmer. A business background combined with the entrepreneurial spirit can be utilised for aligning profitable goals when programming software.
+                        The gratification of solving problems is what drives me to be a better programmer. 
+                        A business background combined with the entrepreneurial spirit can be utilised for aligning profitable goals when programming software.
                         I have over a decade of experience in customer service in Europe and here in the United States. While working in the luxury hotel and restaurant industry I was trained to maintain calm under pressure and under stressful situations, focusing on the customer experience. My fire comes from a passion of helping people and my way of thinking “outside the comfort zone” to find a solution, which translates to problem solving, whether that is a human or a computer related challenge.
                         I have applied the same way of thinking during my switch onto my new career path in IT and software development and I am able to successfully combine the two concepts to be a step ahead.
                     </p>
                 </div>
-                <div className={`row align-center`}>
+                {/* <div className={`row align-center`}>
                     VIDEO OF MYSELF
-                </div>
+                </div> */}
                 <FidgetSpinner
                     visible={true}
                     height="80"
