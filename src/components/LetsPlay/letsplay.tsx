@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Tetris } from "./Tetris/tetris";
 import { AnimatedLetters } from "../AnimatedLetters/animatedLetters";
+import { DNA } from "react-loader-spinner";
 
 export const LetsPlay: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
@@ -36,6 +37,13 @@ export const LetsPlay: React.FC = () => {
 
             </div>
             <Tetris />
+            <DNA
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="dna-loading"
+                wrapperClass="loader-active"
+            />
         </div>
     )
 } 
