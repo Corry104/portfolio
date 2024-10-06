@@ -28,7 +28,7 @@ export const Welcome: React.FC = () => {
         <>
             <div className={`background text`}>
                 <div className={`row align-center padding-thirty`}>
-                    <div >
+                    <div className={`img-container`}>
                         <img src={businessImg} alt="business_picture" className={`main-pic`} />
                     </div>
                     <div className={`subtitle`}>

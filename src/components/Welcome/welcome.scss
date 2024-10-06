@@ -4,6 +4,7 @@
   padding: 20px;
   width: 400px;
   height: 400px;
+  overflow-x: hidden
 }
 
 .img-container {
@@ -50,7 +51,7 @@
   }
 
   img {
-    border-radius: 25px;
+    border-radius: 50px;
     max-width: 100%;
     max-height: 100%;
   }
