@@ -63,40 +63,40 @@ export const Welcome: React.FC = () => {
                 </div>
 
 
-                <div className={`row align-center`}>
+                <div className={`row align-center img-container`}>
                     <div className={`img-lay`}>
                         <NavLink to='/about' >
                             <img className={`img-space`} src={aboutImg} alt="about" width={img_width} height={img_height} />
+                            <div className={`img-text text`}>
+                                <p>ABOUT</p>
+                            </div>
                         </NavLink>
-                        <div className={`img-text text`}>
-                            <p>ABOUT</p>
-                        </div>
                     </div>
                     <div className={`img-lay`}>
                         <NavLink to='/projects' >
                             <img className={`img-space`} src={projectImg} alt="projects" width={img_width} height={img_height} />
+                            <div className={`img-text text`}>
+                                <p>PROJECTS</p>
+                            </div>
                         </NavLink>
-                        <div className={`img-text text`}>
-                            <p>PROJECTS</p>
-                        </div>
                     </div>
                 </div>
-                <div className={`row align-center`}>
+                <div className={`row align-center img-container`}>
                     <div className={`img-lay`}>
                         <NavLink to='/contact' >
                             <img className={`img-space`} src={contactImg} alt="contact" width={img_width} height={img_height} />
+                            <div className={`img-text text`}>
+                                <p>CONTACT</p>
+                            </div>
                         </NavLink>
-                        <div className={`img-text text`}>
-                            <p>CONTACT</p>
-                        </div>
                     </div>
                     <div className={`img-lay`}>
                         <NavLink to='/letsplay' >
                             <img className={`img-space`} src={letsPlayImg} alt="letsplay" width={img_width} height={img_height} />
+                            <div className={`img-text text`}>
+                                <p>LET'S PLAY</p>
+                            </div>
                         </NavLink>
-                        <div className={`img-text text`}>
-                            <p>LET'S PLAY</p>
-                        </div>
                     </div>
                 </div>
                 <Hourglass
