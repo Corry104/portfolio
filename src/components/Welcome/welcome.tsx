@@ -62,7 +62,6 @@ export const Welcome: React.FC = () => {
                     </p>
                 </div>
 
-
                 <div className={`row align-center img-container`}>
                     <div className={`img-lay`}>
                         <NavLink to='/about' >
