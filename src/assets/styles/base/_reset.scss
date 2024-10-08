@@ -33,6 +33,15 @@
     @extend %animation;
     @extend %min-height;
   }
+  input, textarea {
+    background-color: $dark-100;
+  }
+  input::placeholder, textarea::placeholder {
+    color: $white;
+  }
+  button {
+    background-color: $dark-100;
+  }
 }
 
 .row {
@@ -83,7 +92,7 @@
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 4px;
-  border: 1px solid $dark-200;
+  border: 1px solid $dark-000;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
@@ -92,6 +101,9 @@
 
 p {
   font-size: 22px;
+  &.margin-left-fifty{
+    margin-left: 50px;
+  }
   @extend %animation;
   &::before {
     content: '<p>';
@@ -111,13 +123,6 @@ p {
     opacity: 1;
   }
 }
-
-@media (max-width: 1600px) {
-  .align-center {
-    flex-direction: column;
-  }
-}
-
 
 @media (max-width: 1050px) {
   .welcome-paragraph-pad-top {

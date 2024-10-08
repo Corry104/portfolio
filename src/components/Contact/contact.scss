@@ -1,6 +1,5 @@
 @use '../../assets/styles/themes/theme.scss' as *;
 
-
 .contact-form {
   width: 100%;
 
@@ -43,7 +42,7 @@
 }
 
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .align-center {
     flex-direction: column;
   }

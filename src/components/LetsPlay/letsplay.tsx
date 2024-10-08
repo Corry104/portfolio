@@ -27,10 +27,10 @@ export const LetsPlay: React.FC = () => {
                 </div>
             </div>
             <div className={'paragraph-padding'}>
-                <p>
+                <p className={`margin-left-fifty`}>
                     I don't know about you but I love gaming! So here is a game of Tetris for you to enjoy. Have fun!! 
                 </p>
-                <p>
+                <p className={`margin-left-fifty`}>
                     Disclaimer: The game can only be played using a keyboard. Thank you for understanding!
                 </p>
                 

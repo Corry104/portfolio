@@ -38,10 +38,10 @@ export const Projects: React.FC = () => {
                 </div>
             </div>
             <div className={'paragraph-padding'}>
-                <p>
+                <p className={`margin-left-fifty`}>
                     I have been involved in several projects throughout my career and I am very proud of all the work I have done because I gave 100% to each and every one of them.
                 </p>
-                <p>
+                <p className={`margin-left-fifty`}>
                     Inside my <a href="https://github.com/Corry104" target="_blank" rel="noopener noreferrer" className={`text`}>GitHub profile</a> you will find more projects based on  my experience level at the time they have been coded.
                 </p>
             </div>

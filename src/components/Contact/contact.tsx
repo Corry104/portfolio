@@ -73,10 +73,10 @@ export const Contact: React.FC = () => {
                     </div>
                 </div>
                 <div className={'paragraph-padding'}>
-                    <p>
+                    <p className={`margin-left-fifty`}>
                         Let's get in touch! 
                     </p>
-                    <p>
+                    <p className={`margin-left-fifty`}>
                         Make sure to fill out all the fields with your correct information, shoot me a message and I will get back to you promptly!
                     </p>
                 </div>

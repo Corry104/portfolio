@@ -26,15 +26,15 @@ export const About: React.FC = () => {
                     </div>
                 </div>
                 <div className={'paragraph-padding'}>
-                    <p>
+                    <p className={`margin-left-fifty`}>
                         My work and education history is quite unique, they have been some major changes in my career.
                         I have started in the luxury hotel and high-end restaurant business to eventually, due to private family reason, make a full switch into the IT world and more specifically, Software Development by obtaining a certification in Full Stack Web Development at the University of California Los Angeles, Go Bruins!!
                     </p>
-                    <p>
+                    <p className={`margin-left-fifty`}>
                         I have a natural ability to rewire myself and adapt in change of circumstances with a strong will to succeed in any of the challenges I am facing and I pride myself as a logical and creative thinker who enjoys learning new languages, frameworks and technologies.
                         My analytical skills, education, and passion are crucial to be one step ahead in this ever evolving technological industry. My stellar organisational skills are essential to keep code DRY as re-factored as possible.
                     </p>
-                    <p>
+                    <p className={`margin-left-fifty`}>
                         The gratification of solving problems is what drives me to be a better programmer. 
                         A business background combined with the entrepreneurial spirit can be utilised for aligning profitable goals when programming software.
                         I have over a decade of experience in customer service in Europe and here in the United States. While working in the luxury hotel and restaurant industry I was trained to maintain calm under pressure and under stressful situations, focusing on the customer experience. My fire comes from a passion of helping people and my way of thinking “outside the comfort zone” to find a solution, which translates to problem solving, whether that is a human or a computer related challenge.

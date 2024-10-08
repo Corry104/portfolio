@@ -48,14 +48,15 @@ export const Welcome: React.FC = () => {
                     <SpinningCube />
                 </div>
                 <div className={'paragraph-padding welcome-paragraph-pad-top'}>
-                    <p>
-                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
+                    <p className={`margin-left-fifty`}>
+                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer, 
+                        with the goal in mind to expand my skills and soon become an experienced Full Stack Developer.
                     </p>
-                    <p>
+                    <p className={`margin-left-fifty`}>
                         I am a problem solver, a team player, highly disciplined and very result driven.
                         In my experience there are successful track records of looking at requirements, putting together estimates, and delivering projects successfully and on schedule.
                     </p>
-                    <p>
+                    <p className={`margin-left-fifty`}>
                         As part of my duties, I provided enhancements to software, mobile applications, and websites.
                         I create logic approaches and provide immediate solutions to unexpected problems.
                         As a Software Developer, my goal is to continuously increase my programming skills to present better solutions to my employers and their clients.
