@@ -120,9 +120,7 @@ p {
   font-size: 20px;
   @extend %animation;
 }
-span {
-  @extend %animation;
-}
+
 input {
   @extend %animation;
 }
