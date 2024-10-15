@@ -7,6 +7,7 @@ import { Modal } from '../Modal/modal';
 import { Comment } from 'react-loader-spinner';
 import { validateEmail } from '../../utils/utils';
 
+
 export const Contact: React.FC = () => {
     const [lettersAnimation, setLettersAnimation] = useState('text-animate');
     const [emailTemplate, setEmailTemplate] = useState({ name: '', email: '', subject: '', message: '' });
@@ -29,8 +30,6 @@ export const Contact: React.FC = () => {
 
     const sendEmail = (e: any) => {
         e.preventDefault();
-
-        console.log('email template ', validateEmail(emailTemplate['email']) )
         if(!validateEmail(emailTemplate['email'])){
             setErrorMessage('Please enter a valid e-mail address.')
         }
@@ -63,86 +62,84 @@ export const Contact: React.FC = () => {
     return (
         <>
             <div className={`background text`}>
-                <div className={`row align-center padding-thirty`}>
-                    <div className={`subtitle`}>
+                <section className={`row align-center padding-thirty  padding-all`}>
+                    <summary className={`subtitle`}>
                         <AnimatedLetters
                             letters={lettersAnimation}
                             message={contactMe}
                             idx={15}
                         />
-                    </div>
-                </div>
-                <div className={'paragraph-padding'}>
+                    </summary>
+                </section>
+                <article className={'paragraph-padding'}>
                     <p className={`margin-left-fifty`}>
                         Let's get in touch! 
                     </p>
                     <p className={`margin-left-fifty`}>
                         Make sure to fill out all the fields with your correct information, shoot me a message and I will get back to you promptly!
                     </p>
-                </div>
+                </article>
 
-                <div className={`row align-center`}>
-                    <div className={`contact-form`}>
-                        <form ref={refForm} onSubmit={sendEmail}>
-                            <ul>
-                                <li>
-                                    <input
-                                        className='text'
-                                        type="text"
-                                        placeholder='Name*'
-                                        name="name"
-                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                            setEmailTemplate({ ...emailTemplate, 'name': e.target.value });
-                                        }}
-                                        value={emailTemplate['name']}
-                                        required
-                                    />
-                                </li>
-                                <li>
-                                    <input
-                                        className='text'
-                                        type="email"
-                                        placeholder='Email*'
-                                        name="email"
-                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                            setEmailTemplate({ ...emailTemplate, 'email': e.target.value });
-                                        }}
-                                        value={emailTemplate['email']}
-                                        required
-                                    />
-                                    {errorMessage ? <div className={`error`}>{errorMessage}</div> : null}
-                                </li>
-                                <li>
-                                    <input
-                                        className='text'
-                                        placeholder="Subject*"
-                                        type="text"
-                                        name="subject"
-                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                            setEmailTemplate({ ...emailTemplate, 'subject': e.target.value });
-                                        }}
-                                        value={emailTemplate['subject']}
-                                        required
-                                    />
-                                </li>
-                                <li>
-                                    <textarea
-                                        className='text'
-                                        placeholder="Message*"
-                                        name="message"
-                                        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
-                                            setEmailTemplate({ ...emailTemplate, 'message': e.target.value });
-                                        }}
-                                        value={emailTemplate['message']}
-                                        required
-                                    ></textarea>
-                                </li>
-                                <li>
-                                    <input type="submit" className={`flat-button float-right text`} value="SEND" />
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
+                <section className={`row align-center`}>
+                    <form ref={refForm} onSubmit={sendEmail} className={`contact-form`}>
+                        <ul>
+                            <li>
+                                <input
+                                    className='text'
+                                    type="text"
+                                    placeholder='Name*'
+                                    name="name"
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                        setEmailTemplate({ ...emailTemplate, 'name': e.target.value });
+                                    }}
+                                    value={emailTemplate['name']}
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <input
+                                    className='text'
+                                    type="email"
+                                    placeholder='Email*'
+                                    name="email"
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                        setEmailTemplate({ ...emailTemplate, 'email': e.target.value });
+                                    }}
+                                    value={emailTemplate['email']}
+                                    required
+                                />
+                                {errorMessage ? <div className={`error`}>{errorMessage}</div> : null}
+                            </li>
+                            <li>
+                                <input
+                                    className='text'
+                                    placeholder="Subject*"
+                                    type="text"
+                                    name="subject"
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                        setEmailTemplate({ ...emailTemplate, 'subject': e.target.value });
+                                    }}
+                                    value={emailTemplate['subject']}
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <textarea
+                                    className='text'
+                                    placeholder="Message*"
+                                    name="message"
+                                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
+                                        setEmailTemplate({ ...emailTemplate, 'message': e.target.value });
+                                    }}
+                                    value={emailTemplate['message']}
+                                    required
+                                ></textarea>
+                            </li>
+                            <li>
+                                <input type="submit" className={`flat-button float-right text`} value="SEND" />
+                            </li>
+                        </ul>
+                    </form>
                     <Map />
                     {commonModal ? 
                         <Modal 
@@ -154,7 +151,7 @@ export const Contact: React.FC = () => {
                         />                
                     : null
                     }
-                </div>
+                </section>
                 <Comment
                     visible={true}
                     height="80"

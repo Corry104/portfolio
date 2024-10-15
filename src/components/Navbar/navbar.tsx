@@ -3,21 +3,16 @@ import '../../assets/styles/_main.scss';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faEnvelope, faGamepad, faHome, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
+import { NavbarParams } from '../interfaces/interface';
 
-/** Defined props for NavBar */
-interface Params {
-    theme: any,
-    toggle: ()=>{}
-}
-
-export const Navbar: React.FC<Params> = (params: Params) => {
+export const Navbar: React.FC<NavbarParams> = (params: NavbarParams) => {
     const { theme, toggle } = params;
 
     return (
 
         <>
             <nav className={`${styles[theme]} `}>
-                <div className={`${styles['locked']} `}>
+                <section className={`${styles['locked']} `}>
                     <NavLink to='/' >
                         <FontAwesomeIcon icon={faHome} className={styles['icon']}></FontAwesomeIcon>
                     </NavLink>
@@ -38,7 +33,7 @@ export const Navbar: React.FC<Params> = (params: Params) => {
                         :
                         <FontAwesomeIcon onClick={toggle} icon={faMoon} className={styles['icon']}></FontAwesomeIcon>
                     }
-                </div>
+                </section>
             </nav>
             
         </>

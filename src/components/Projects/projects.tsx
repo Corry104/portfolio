@@ -27,24 +27,24 @@ export const Projects: React.FC = () => {
 
     return (
         <div className={`background text`}>
-            <div className={`row align-center padding-thirty`}>
-                <div className={`subtitle`}>
+            <section className={`row align-center padding-thirty padding-all`}>
+                <summary className={`subtitle`}>
                     <AnimatedLetters
                         letters={lettersAnimation}
                         message={aboutMe}
                         idx={15}
                     />
 
-                </div>
-            </div>
-            <div className={'paragraph-padding'}>
+                </summary>
+            </section>
+            <article className={'paragraph-padding'}>
                 <p className={`margin-left-fifty`}>
                     I have been involved in several projects throughout my career and I am very proud of all the work I have done because I gave 100% to each and every one of them.
                 </p>
                 <p className={`margin-left-fifty`}>
                     Inside my <a href="https://github.com/Corry104" target="_blank" rel="noopener noreferrer" className={`text`}>GitHub profile</a> you will find more projects based on  my experience level at the time they have been coded.
                 </p>
-            </div>
+            </article>
 
             <Carousel 
                 title={'Hughesnet Mobile Application'}

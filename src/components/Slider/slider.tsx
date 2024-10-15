@@ -1,17 +1,9 @@
 import Slider from "react-slick";
 import './slider.scss';
-
-/** Defined props for Carousel */
-interface Params {
-    title: string,
-    img: string[],
-    width: number,
-    height: number,
-    url: string
-}
+import { SLIDER } from "../interfaces/interface";
 
 
-export const Carousel: React.FC<Params> = (params: Params) => {
+export const Carousel: React.FC<SLIDER> = (params: SLIDER) => {
     const { title, img, width, height, url } = params;
 
     var settings = {
@@ -40,21 +32,21 @@ export const Carousel: React.FC<Params> = (params: Params) => {
     };
 
     return (
-        <div className={`row align-center`}>
-            <div className={`slider-container`}>
+        <section className={`row align-center`}>
+            <p className={`slider-container`}>
                 <a href={url} target="_blank" rel="noopener noreferrer" className={`url text`}><h1>{title}</h1></a>
                 <Slider {...settings} >
                     {img.length > 0 ?
                         img.map((el: any, index:number) => {
                             return (
-                                <div key={index}>
+                                <p key={index}>
                                     <img className={`img-spacing`} src={el} alt={`img_${index}`} width={width} height={height} />
-                                </div>
+                                </p>
                             )
                         }) : null
                     }
                 </Slider>
-            </div>
-        </div>
+            </p>
+        </section>
     )
 }

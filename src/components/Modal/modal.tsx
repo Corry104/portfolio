@@ -1,16 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './modal.scss';
+import { ModalParams } from '../interfaces/interface';
 
-/** Defined props for dialogs */
-interface Params {
-    title: string,
-    description: string,
-    isOpen: boolean,
-    onClose: () => void,
-    btnText: string
-}
-
-export const Modal: React.FC<Params> = (params: Params) => {
+export const Modal: React.FC<ModalParams> = (params: ModalParams) => {
     const { title, description, isOpen, onClose, btnText } = params;
     const modalRef = useRef<HTMLDivElement>(null);
 
@@ -36,14 +28,13 @@ export const Modal: React.FC<Params> = (params: Params) => {
     return (
         <>
             <div className={'modal-overlay'} onClick={() => handleClickOutside}>
-                <div className={'modal-content'} ref={modalRef}>
+                <section className={'modal-content'} ref={modalRef}>
                     <h2 className={'modal-title'}>{title}</h2>
                     <p>{description}</p>
                     <button className={`close-button text`} onClick={onClose}>
                         {btnText}
                     </button>
-
-                </div>
+                </section>
             </div>
         </>
     );

@@ -1,18 +1,11 @@
 import './animatedLetters.scss';
+import { AnimatedLettersProps } from '../interfaces/interface';
 
-/** Define props for Animated Letters */
-interface Params {
-    letters:any;
-    message:any[];
-    idx:number;
-}
-
-
-export const AnimatedLetters: React.FC<Params> = (params:Params) => {
+export const AnimatedLetters: React.FC<AnimatedLettersProps> = (params:AnimatedLettersProps) => {
     const {letters, message, idx} = params;
     
     return(
-        <span>
+        <>
             {message.map((char:any, i:number) => {
                 return(
                     <span key={i} className={`${letters} _${i + idx}`}>
@@ -20,6 +13,6 @@ export const AnimatedLetters: React.FC<Params> = (params:Params) => {
                     </span>
                 )
             })}
-        </span>
+        </>
     )
 } 

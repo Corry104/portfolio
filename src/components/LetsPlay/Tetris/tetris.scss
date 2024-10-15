@@ -6,9 +6,12 @@
     '. title .'
     '. game controls';
   grid-template-columns: repeat(3, 1fr);
-  h1 {
+  .grid-center {
     text-align: center;
     grid-area: title;
+  }
+  .padding-bottom {
+    padding-bottom: 20px;
   }
 
   .board {

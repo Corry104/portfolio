@@ -1,0 +1,25 @@
+
+input[type='search'] {
+  border: 0;
+  height: 30px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+
+.search {
+    cursor: pointer;
+    font-family: 'La Belle Aurore';
+
+}
+
+.city:hover {
+    cursor: pointer;
+    animation: rubberBand 1s;
+}

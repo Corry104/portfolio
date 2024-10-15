@@ -15,10 +15,10 @@ export const Layout: React.FC = () => {
   })
 
   return (
-    <div className={`${theme} `}>
+    <main className={`${theme} `}>
       <Navbar theme={theme} toggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
       <Outlet />
       <Footer theme={theme} />
-    </div>
+    </main>
   )
 }

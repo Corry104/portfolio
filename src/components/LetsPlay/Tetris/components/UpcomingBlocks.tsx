@@ -1,11 +1,9 @@
 import { Block, SHAPES } from '../types';
 import '../tetris.scss';
 
-
 interface Props {
     upcomingBlocks: Block[];
 }
-
 
 export const UpcomingBlocks: React.FC<Props> = (props: Props) => {
     const { upcomingBlocks } = props;

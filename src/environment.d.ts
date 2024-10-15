@@ -3,7 +3,8 @@ declare global {
       interface ProcessEnv {
         REACT_APP_SERVICE_ID: string;
         REACT_APP_TEMPLATE_ID: string;
-        REACT_APP_PUBLIC_KEY: string
+        REACT_APP_PUBLIC_KEY: string;
+        REACT_APP_API_KEY: string;
       }
     }
   }

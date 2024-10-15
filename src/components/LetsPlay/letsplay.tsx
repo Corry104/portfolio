@@ -17,25 +17,23 @@ export const LetsPlay: React.FC = () => {
 
     return (
         <div className={`background text`}>
-            <div className={`row align-center padding-thirty`}>
-                <div className={`subtitle`}>
+            <section className={`row align-center padding-thirty padding-all`}>
+                <summary className={`subtitle`}>
                     <AnimatedLetters
                         letters={lettersAnimation}
                         message={letsPlay}
                         idx={15}
                     />
-                </div>
-            </div>
-            <div className={'paragraph-padding'}>
+                </summary>
+            </section>
+            <article className={'paragraph-padding'}>
                 <p className={`margin-left-fifty`}>
                     I don't know about you but I love gaming! So here is a game of Tetris for you to enjoy. Have fun!! 
                 </p>
                 <p className={`margin-left-fifty`}>
                     Disclaimer: The game can only be played using a keyboard. Thank you for understanding!
-                </p>
-                
-
-            </div>
+                </p>                
+            </article>
             <Tetris />
             <DNA
                 visible={true}

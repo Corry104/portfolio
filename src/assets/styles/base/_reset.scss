@@ -50,6 +50,13 @@
     justify-content: center;
     align-items: center;
   }
+  &.inLine-center {
+    align-items: center;
+  }
+
+  .left-auto {
+    margin-left: auto;
+  }
   
   .subtitle {
     font-size: 55px;
@@ -64,19 +71,30 @@
   }
 }
 
-.padding-thirty {
-  padding: 30px;
+.col {
+  display: flex;
+  flex-direction: column;
 }
+
+
+li {
+  list-style-type: none;
+}
+
+
 
 .paragraph-padding {
   padding: 10px 30px 10px 30px;
+  .margin-left-fifty{
+    margin-left: 50px;
+  }
   &::before {
-    content: '<div>';
+    content: '<section>';
     font-size: 25px;
     font-family: 'La Belle Aurore';
   }
   &::after {
-    content: '</div>';
+    content: '</section>';
     font-family: 'La Belle Aurore';
     font-size: 25px;
   }
@@ -98,21 +116,82 @@
   cursor: pointer;
 }
 
-
 p {
-  font-size: 22px;
-  &.margin-left-fifty{
-    margin-left: 50px;
-  }
+  font-size: 20px;
   @extend %animation;
-  &::before {
-    content: '<p>';
-    font-family: 'La Belle Aurore';
+}
+span {
+  @extend %animation;
+}
+input {
+  @extend %animation;
+}
+
+// paddings
+.no-padding {
+  padding: 0px;
+}
+.padding-text-box {//used in overview for hnsStatus.
+  padding: 5px 10px;
+}
+
+.padding-five {
+  &.padding-all {
+    padding: 5px;
   }
-  &::after {
-    font-family: 'La Belle Aurore';
-    content: '</p>';
+  &.padding-lr {
+    padding-left: 5px;
+    padding-right: 5px;
   }
+  &.padding-tb {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.padding-thirty {
+  &.padding-all {
+    padding: 30px;
+  }
+}
+
+.padding-twenty {
+  &.padding-all {
+    padding: 20px;
+  }
+  &.padding-top{
+    padding-top: 20px;
+  }
+  &.padding-lr {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &.padding-tb {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &.padding-right {
+    padding-right: 20px;
+  }
+}
+
+//margin
+.margin-five {
+  &.margin-all {
+    margin: 5px;
+  }
+  &.margin-lr {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  &.margin-tb {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.error {
+  color: $red-800;
 }
 
 @keyframes fadeIn {

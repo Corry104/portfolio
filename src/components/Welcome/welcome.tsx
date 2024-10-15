@@ -9,6 +9,7 @@ import projectImg from '../../assets/images/projects_img.jpg';
 import { SpinningCube } from "../SpinningCube/spinningCube";
 import { NavLink } from "react-router-dom";
 import { Hourglass } from "react-loader-spinner";
+import { Weather } from "../Weather/weather";
 
 
 
@@ -26,12 +27,13 @@ export const Welcome: React.FC = () => {
     }, [])
     return (
         <>
-            <div className={`background text`}>
-                <div className={`row align-center padding-thirty`}>
+            <div className={`background text padding-thirty padding-all`}>
+                <Weather />
+                <div className={`row align-center`}>
                     <div className={`img-container`}>
                         <img src={businessImg} alt="business_picture" className={`main-pic`} />
                     </div>
-                    <div className={`subtitle`}>
+                    <summary className={`subtitle`}>
                         <AnimatedLetters
                             letters={lettersAnimation}
                             message={greetings}
@@ -43,13 +45,13 @@ export const Welcome: React.FC = () => {
                             message={fName}
                             idx={30}
                         />
-                    </div>
+                    </summary>
 
                     <SpinningCube />
                 </div>
-                <div className={'paragraph-padding welcome-paragraph-pad-top'}>
+                <article className={'paragraph-padding welcome-paragraph-pad-top'}>
                     <p className={`margin-left-fifty`}>
-                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer, 
+                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer,
                         with the goal in mind to expand my skills and soon become an experienced Full Stack Developer.
                     </p>
                     <p className={`margin-left-fifty`}>
@@ -61,44 +63,44 @@ export const Welcome: React.FC = () => {
                         I create logic approaches and provide immediate solutions to unexpected problems.
                         As a Software Developer, my goal is to continuously increase my programming skills to present better solutions to my employers and their clients.
                     </p>
-                </div>
+                </article>
 
-                <div className={`row align-center img-container`}>
-                    <div className={`img-lay`}>
+                <section className={`row align-center img-container`}>
+                    <p className={`img-lay`}>
                         <NavLink to='/about' >
                             <img className={`img-space`} src={aboutImg} alt="about" width={img_width} height={img_height} />
-                            <div className={`img-text text`}>
-                                <p>ABOUT</p>
-                            </div>
+                            <label className={`img-text text`}>
+                                <span>ABOUT</span>
+                            </label>
                         </NavLink>
-                    </div>
-                    <div className={`img-lay`}>
+                    </p>
+                    <p className={`img-lay`}>
                         <NavLink to='/projects' >
                             <img className={`img-space`} src={projectImg} alt="projects" width={img_width} height={img_height} />
-                            <div className={`img-text text`}>
-                                <p>PROJECTS</p>
-                            </div>
+                            <label className={`img-text text`}>
+                                <span>PROJECTS</span>
+                            </label>
                         </NavLink>
-                    </div>
-                </div>
-                <div className={`row align-center img-container`}>
-                    <div className={`img-lay`}>
+                    </p>
+                </section>
+                <section className={`row align-center img-container`}>
+                    <p className={`img-lay`}>
                         <NavLink to='/contact' >
                             <img className={`img-space`} src={contactImg} alt="contact" width={img_width} height={img_height} />
-                            <div className={`img-text text`}>
-                                <p>CONTACT</p>
-                            </div>
+                            <label className={`img-text text`}>
+                                <span>CONTACT</span>
+                            </label>
                         </NavLink>
-                    </div>
-                    <div className={`img-lay`}>
+                    </p>
+                    <p className={`img-lay`}>
                         <NavLink to='/letsplay' >
                             <img className={`img-space`} src={letsPlayImg} alt="letsplay" width={img_width} height={img_height} />
-                            <div className={`img-text text`}>
-                                <p>LET'S PLAY</p>
-                            </div>
+                            <label className={`img-text text`}>
+                                <span>LET'S PLAY</span>
+                            </label>
                         </NavLink>
-                    </div>
-                </div>
+                    </p>
+                </section>
                 <Hourglass
                     visible={true}
                     height="80"

@@ -1,19 +1,15 @@
 import './footer.scss';
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FooterProps } from '../interfaces/interface';
 
-/** Defined props for footer */
-interface Params {
-    theme: any,
-}
-
-export const Footer: React.FC<Params> = (params: Params) => {
+export const Footer: React.FC<FooterProps> = (params: FooterProps) => {
     const { theme } = params;
 
     return (
         <>
-            <div className={theme}>
-                <div className={`footer`}>
+            <section className={theme}>
+                <footer className={`footer`}>
                         <li>
                             <a href="https://www.linkedin.com/in/corradoalfano/" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faLinkedin} className={`icon`}></FontAwesomeIcon>
@@ -24,8 +20,8 @@ export const Footer: React.FC<Params> = (params: Params) => {
                                 <FontAwesomeIcon icon={faGithub} className={`icon`}></FontAwesomeIcon>
                             </a>
                         </li>
-                </div>
-            </div>
+                </footer>
+            </section>
         </>
     )
 }
