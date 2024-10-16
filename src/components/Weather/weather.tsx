@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { WeatherData, SearchOptions } from '../interfaces/interface';
-import { Greetings } from '../Greetings/greetings';
 import './weather.scss';
-import MagnifyingGlass from '../../assets/images/magnifying_glass.png';
 
 
 export const Weather: React.FC = () => {

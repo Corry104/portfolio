@@ -63,6 +63,8 @@
   .subtitle {
     font-size: 55px;
     font-family: 'La Belle Aurore';
+  padding: 20px;
+
     @extend %animation;
     &::before {
       content: '<h1>';
@@ -219,6 +221,6 @@ input {
 
 @media (max-width: 1050px) {
   .welcome-paragraph-pad-top {
-    padding-top: 25%;
+    padding-top: 50%;
   }
 }
