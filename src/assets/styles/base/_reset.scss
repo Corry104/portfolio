@@ -63,7 +63,7 @@
   .subtitle {
     font-size: 55px;
     font-family: 'La Belle Aurore';
-  padding: 20px;
+    padding: 20px;
 
     @extend %animation;
     &::before {
@@ -132,9 +132,6 @@ input {
 // paddings
 .no-padding {
   padding: 0px;
-}
-.padding-text-box {//used in overview for hnsStatus.
-  padding: 5px 10px;
 }
 
 .padding-five {
