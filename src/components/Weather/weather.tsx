@@ -127,7 +127,7 @@ export const Weather: React.FC = () => {
                                             <div key={index} className={`row inLine-center`}>
                                                 <img
                                                     alt={`weather-icon-${subEl['description']}`}
-                                                    src={`http://openweathermap.org/img/wn/${subEl['icon']}@2x.png`}
+                                                    src={`https://openweathermap.org/img/wn/${subEl['icon']}@2x.png`}
                                                 />
                                                 <p>It's {new Date(el['dt_txt']).toLocaleDateString('en-US', { weekday: 'long' })} in {weather['name']}, {weather['country']}.
                                                     The humidity is at {el['main']['humidity']}% and the wind speed is currently {el['wind']['speed']} mph.
