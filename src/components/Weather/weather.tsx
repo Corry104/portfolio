@@ -6,7 +6,7 @@ import MagnifyingGlass from '../../assets/images/magnifying_glass.png';
 
 
 export const Weather: React.FC = () => {
-    const BASE_URL = 'http://api.openweathermap.org'
+    const BASE_URL = 'https://api.openweathermap.org'
     const APIKEY = process.env.REACT_APP_API_KEY;
     const [city, setCity] = useState('');
     const [searchOptions, setSearchOptions] = useState<[]>([]);
