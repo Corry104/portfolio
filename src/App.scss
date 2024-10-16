@@ -25,16 +25,3 @@
   font-style: normal;
 }
 
-
-.loader-active {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  animation: fadeOut 2s 2s;
-  animation-fill-mode: forwards;
-  z-index: 9999;
-}

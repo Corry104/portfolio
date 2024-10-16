@@ -18,7 +18,14 @@ input[type='search'] {
     font-family: 'La Belle Aurore';
 }
 
+
 .city:hover {
     cursor: pointer;
     animation: rubberBand 1s;
+}
+
+@media (max-width:500px) {
+    .city {
+        margin-left: auto;
+    }
 }

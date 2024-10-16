@@ -4,7 +4,7 @@
   animation: fadeIn 5s;
 }
 
-%min-height{
+%min-size{
   min-height: 100vh;
 }
 
@@ -17,9 +17,9 @@
     @extend %animation;
   }
   .background {
-    @extend %animation;
-    @extend %min-height;
     background-color: $light_background;
+    @extend %animation;
+    @extend %min-size;
   }
 }
 
@@ -33,7 +33,7 @@
   .background {
     background-color: $dark_background;
     @extend %animation;
-    @extend %min-height;
+    @extend %min-size;
   }
   input, textarea {
     background-color: $dark-100;
@@ -193,6 +193,20 @@ input {
 .error {
   color: $red-800;
 }
+
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  animation: fadeOut 2s 2s;
+  animation-fill-mode: forwards;
+  z-index: 9999;
+}
+
 
 @keyframes fadeIn {
   0% {
