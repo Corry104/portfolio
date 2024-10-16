@@ -14,6 +14,7 @@
     color: $primary-color;
     font-family: 'Helvetica Neue';
     letter-spacing: 1px;
+    @extend %animation;
   }
   .background {
     @extend %animation;
@@ -27,6 +28,7 @@
     color: $secondary-color;
     font-family: 'Helvetica Neue';
     letter-spacing: 1px;
+    @extend %animation;
   }
   .background {
     background-color: $dark_background;
