@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import './slider.scss';
-import { SLIDER } from "../interfaces/interface";
+import { SLIDER } from '../../utils/interfaces/interface';
 
 
 export const Carousel: React.FC<SLIDER> = (params: SLIDER) => {
@@ -34,7 +34,7 @@ export const Carousel: React.FC<SLIDER> = (params: SLIDER) => {
     return (
         <section className={`row align-center`}>
             <p className={`slider-container`}>
-                <a href={url} target="_blank" rel="noopener noreferrer" className={`url text`}><h1>{title}</h1></a>
+                <h1>{title}</h1>
                 <Slider {...settings} >
                     {img.length > 0 ?
                         img.map((el: any, index:number) => {

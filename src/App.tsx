@@ -34,8 +34,6 @@ const App: React.FC = () => {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-      
-
     </>
 
   );

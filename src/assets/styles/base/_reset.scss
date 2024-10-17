@@ -81,12 +81,6 @@
 }
 
 
-li {
-  list-style-type: none;
-}
-
-
-
 .paragraph-padding {
   padding: 10px 30px 10px 30px;
   .margin-left-fifty{
@@ -127,6 +121,14 @@ p {
 
 input {
   @extend %animation;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
 }
 
 // paddings

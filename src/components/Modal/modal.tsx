@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './modal.scss';
-import { ModalParams } from '../interfaces/interface';
+import { ModalParams } from '../../utils/interfaces/interface';
 
 export const Modal: React.FC<ModalParams> = (params: ModalParams) => {
     const { title, description, isOpen, onClose, btnText } = params;

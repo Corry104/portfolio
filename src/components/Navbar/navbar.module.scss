@@ -18,6 +18,7 @@
     font-size: 16px;
     color: $primary-color;
   }
+  
 }
 
 .dark {
@@ -39,4 +40,136 @@
     font-size: 16px;
     color: $secondary-color;
   }
+ 
+}
+
+
+@media (min-width:600px) {
+
+  .light{
+    a{
+      transition: all .3s ease-out;
+      position: relative;
+      &:hover {
+        color: $primary-color;
+    
+        svg {
+          opacity: 0;
+        }
+    
+        &:after {
+          opacity: 1;
+        }
+      }
+      &:after {
+        content: '';
+        font-size: 12px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+  
+      &:first-child {
+        &:after {
+          content: 'HOME';
+        }
+      }
+      &:nth-child(2) {
+        &:after {
+          content: 'ABOUT';
+        }
+      }
+      &:nth-child(3) {
+        &:after {
+          content: 'PORTFOLIO';
+        }
+      }
+      &:nth-child(4) {
+        &:after {
+          content: 'CONTACT';
+        }
+      }
+      &:nth-child(5) {
+        &:after {
+          content: 'PLAY';
+        }
+      } 
+      &:nth-child(6) {
+        cursor: pointer;
+        &:after {
+          content: 'DARK';
+        }
+      } 
+    }
+  }
+
+  .dark {
+    a{
+      transition: all .3s ease-out;
+      position: relative;
+      &:hover {
+        color: $secondary-color;
+    
+        svg {
+          opacity: 0;
+        }
+    
+        &:after {
+          opacity: 1;
+        }
+      }
+      &:after {
+        content: '';
+        font-size: 12px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+  
+      &:first-child {
+        &:after {
+          content: 'HOME';
+        }
+      }
+      &:nth-child(2) {
+        &:after {
+          content: 'ABOUT';
+        }
+      }
+      &:nth-child(3) {
+        &:after {
+          content: 'PORTFOLIO';
+        }
+      }
+      &:nth-child(4) {
+        &:after {
+          content: 'CONTACT';
+        }
+      }
+      &:nth-child(5) {
+        &:after {
+          content: 'PLAY';
+        }
+      } 
+      &:nth-child(6) {
+        cursor: pointer;
+        &:after {
+          content: 'LIGHT';
+        }
+      } 
+    }
+  }
+  
 }

@@ -1,7 +1,7 @@
 import './footer.scss';
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { FooterProps } from '../interfaces/interface';
+import { FooterProps } from '../../utils/interfaces/interface';
 
 export const Footer: React.FC<FooterProps> = (params: FooterProps) => {
     const { theme } = params;

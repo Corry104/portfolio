@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { WeatherData, SearchOptions } from '../interfaces/interface';
+import { WeatherData, SearchOptions } from '../../utils/interfaces/interface';
 import './weather.scss';
 
 
@@ -109,35 +109,29 @@ export const Weather: React.FC = () => {
             </>
             :
             <>
-
-                {weather['list'].map((el, index) => {
+                <section className={`row align-center padding-twenty padding-top`}>
+                    <button className={`flat-button text`} onClick={clearSearch}> clear search</button>
+                </section>
+                {weather['list'].map((el: WeatherData['list'][0], index: number) => {
                     let temp = Math.round(el['main']['temp']);
                     return (
-                        <div key={index}>
-                            <section className={`row align-center padding-twenty padding-top`}>
-                                <button className={`flat-button text`} onClick={clearSearch}> clear search</button>
-                            </section>
+                        el['weather'].map((subEl: WeatherData['list'][0]['weather'][0], index: number) => {
+                            return (
+                                <>
+                                    <div key={index} className={`row inLine-center`}>
+                                        <img
+                                            alt={`weather-icon-${subEl['description']}`}
+                                            src={`https://openweathermap.org/img/wn/${subEl['icon']}@2x.png`}
+                                        />
+                                        <p>It's {new Date(el['dt_txt']).toLocaleDateString('en-US', { weekday: 'long' })} in {weather['name']}, {weather['country']}.
+                                            The humidity is at {el['main']['humidity']}% and the wind speed is currently {el['wind']['speed']} mph.
+                                            It's  {subEl['description']} at the moment with a temperature around {temp}° <span onClick={() => alert('ddd')}>F</span>.
+                                        </p>
 
-                            <div>
-                                {el['weather'].map((subEl, index) => {
-                                    return (
-                                        <>
-                                            <div key={index} className={`row inLine-center`}>
-                                                <img
-                                                    alt={`weather-icon-${subEl['description']}`}
-                                                    src={`https://openweathermap.org/img/wn/${subEl['icon']}@2x.png`}
-                                                />
-                                                <p>It's {new Date(el['dt_txt']).toLocaleDateString('en-US', { weekday: 'long' })} in {weather['name']}, {weather['country']}.
-                                                    The humidity is at {el['main']['humidity']}% and the wind speed is currently {el['wind']['speed']} mph.
-                                                    It's  {subEl['description']} at the moment with a temperature around {temp}° <span onClick={() => alert('ddd')}>F</span>. 
-                                                </p>
-
-                                            </div>
-                                        </>
-                                    )
-                                })}
-                            </div>
-                        </div>
+                                    </div>
+                                </>
+                            )
+                        })
                     )
                 })}
 
