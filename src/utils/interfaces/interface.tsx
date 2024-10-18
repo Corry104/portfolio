@@ -50,7 +50,6 @@ export interface SLIDER {
     img: string[],
     width: number,
     height: number,
-    url: string
 }
 
 export interface ModalParams {

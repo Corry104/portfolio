@@ -2,16 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatedLetters } from "../AnimatedLetters/animatedLetters"
 import { Vortex } from "react-loader-spinner";
 import { Carousel } from "../Slider/slider";
-import hughesnetMobileMain from '../../assets/images/projects/mobile_appStore.png';
-import hughesnetMobileAccount from '../../assets/images/projects/mobile_appStore_account.png';
-import hughesnetMobileHandbook from '../../assets/images/projects/mobile_appStore_handbook.png';
-import hughesnetMobileSupport from '../../assets/images/projects/mobile_appStore_support.png';
-import hughesnetWebNotifications from '../../assets/images/projects/hughesnet_web_notifications.png';
-import hughesnetWebHandbook from '../../assets/images/projects/hughesnet_web_handbook.png';
-import hughesnetWebMainPage from '../../assets/images/projects/hughesnet_web_mainPage.png';
-import hughesnetWebShop from '../../assets/images/projects/hughesnet_web_shop.png';
-import hughesnetWebChat from '../../assets/images/projects/hughesnet_web_chat.png';
-
+import media from '../../assets/images/index';
 
 
 export const Projects: React.FC = () => {
@@ -45,21 +36,26 @@ export const Projects: React.FC = () => {
                     Inside my <a href="https://github.com/Corry104" target="_blank" rel="noopener noreferrer" className={`text`}>GitHub profile</a> you will find more projects based on  my experience level at the time they have been coded.
                 </p>
             </article>
+            <Carousel 
+                title={'KindeReady'}
+                height={350}
+                width={300}
+                img={[media['kindereadyLogin'], media['kindereadyMain'], media['kindereadyStudent'], media['kindereadyShapeActivities'], media['kindereadyLetterActivities']]}
+            />
 
             <Carousel 
                 title={'Hughesnet Mobile Application'}
-                url={'https://www.apple.com/app-store/'}
                 height={350}
                 width={300}
-                img={[hughesnetMobileMain,hughesnetMobileAccount,hughesnetMobileHandbook,hughesnetMobileSupport]}
+                img={[media['hughesnetMobileMain'],media['hughesnetMobileAccount'],media['hughesnetMobileHandbook'],media['hughesnetMobileSupport']]}
             />
             <Carousel 
                 title={'Hughesnet Website'}
-                url={'https://my.hughesnet.com/en/overview'}
                 height={350}
                 width={300}
-                img={[hughesnetWebMainPage, hughesnetWebHandbook, hughesnetWebNotifications, hughesnetWebChat, hughesnetWebShop]}
+                img={[media['hughesnetWebMainPage'], media['hughesnetWebHandbook'], media['hughesnetWebNotifications'], media['hughesnetWebChat'], media['hughesnetWebShop']]}
             />
+            
 
             <Vortex
                 visible={true}

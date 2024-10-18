@@ -28,9 +28,9 @@ export const Navbar: React.FC<NavbarParams> = (params: NavbarParams) => {
                         <FontAwesomeIcon icon={faGamepad} className={styles['icon']}></FontAwesomeIcon>
                     </NavLink>
                     {theme === 'dark' ? 
-                        <a onClick={toggle}><FontAwesomeIcon icon={faSun} className={styles['icon']} ></FontAwesomeIcon></a>
+                        <a href="javascript:void(0)" onClick={toggle}><FontAwesomeIcon icon={faSun} className={styles['icon']} ></FontAwesomeIcon></a>
                         :
-                        <a onClick={toggle}><FontAwesomeIcon icon={faMoon} className={styles['icon']}></FontAwesomeIcon></a>
+                        <a href="javascript:void(0)" onClick={toggle}><FontAwesomeIcon icon={faMoon} className={styles['icon']}></FontAwesomeIcon></a>
                     }
                 </section>
             </nav> 

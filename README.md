@@ -4,7 +4,7 @@ This is my website to resume my work as a Software Developer. The application wa
 
 **[Live Demo](https://corry104.github.io/portfolio/)**
 
-<img src="./src/assets/images/website_main.png" alt="demo">
+<img src="./src/assets/images/website_main.jpeg" alt="demo">
 
 ## Technologies Used
 

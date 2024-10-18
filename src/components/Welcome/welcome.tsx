@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { AnimatedLetters } from "../AnimatedLetters/animatedLetters";
 import './welcome.scss';
-import businessImg from '../../assets/images/business_pic.jpg';
-import aboutImg from '../../assets/images/about_img.jpg';
-import letsPlayImg from '../../assets/images/letsplay_img.jpg';
-import contactImg from '../../assets/images/contact_img.jpg';
-import projectImg from '../../assets/images/projects_img.jpg';
+// import businessImg from '../../assets/images/business_pic.jpg';
+// import aboutImg from '../../assets/images/about_img.jpg';
+// import letsPlayImg from '../../assets/images/letsplay_img.jpg';
+// import contactImg from '../../assets/images/contact_img.jpg';
+// import projectImg from '../../assets/images/projects_img.jpg';
+import media from "../../assets/images";
 import { SpinningCube } from "../SpinningCube/spinningCube";
 import { NavLink } from "react-router-dom";
 import { Hourglass } from "react-loader-spinner";
@@ -31,7 +32,7 @@ export const Welcome: React.FC = () => {
                 <Weather />
                 <div className={`row align-center`}>
                     <div className={`img-container`}>
-                        <img src={businessImg} alt="business_picture" className={`main-pic`} />
+                        <img src={media['businessImg']} alt="business_picture" className={`main-pic`} />
                     </div>
                     <summary className={`subtitle`}>
                         <AnimatedLetters
@@ -68,7 +69,7 @@ export const Welcome: React.FC = () => {
                 <section className={`row align-center img-container`}>
                     <p className={`img-lay`}>
                         <NavLink to='/about' >
-                            <img className={`img-space`} src={aboutImg} alt="about" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={media['aboutImg']} alt="about" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
                                 <span>ABOUT</span>
                             </label>
@@ -76,7 +77,7 @@ export const Welcome: React.FC = () => {
                     </p>
                     <p className={`img-lay`}>
                         <NavLink to='/projects' >
-                            <img className={`img-space`} src={projectImg} alt="projects" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={media['projectImg']} alt="projects" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
                                 <span>PROJECTS</span>
                             </label>
@@ -86,7 +87,7 @@ export const Welcome: React.FC = () => {
                 <section className={`row align-center img-container`}>
                     <p className={`img-lay`}>
                         <NavLink to='/contact' >
-                            <img className={`img-space`} src={contactImg} alt="contact" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={media['contactImg']} alt="contact" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
                                 <span>CONTACT</span>
                             </label>
@@ -94,7 +95,7 @@ export const Welcome: React.FC = () => {
                     </p>
                     <p className={`img-lay`}>
                         <NavLink to='/letsplay' >
-                            <img className={`img-space`} src={letsPlayImg} alt="letsplay" width={img_width} height={img_height} />
+                            <img className={`img-space`} src={media['letsPlayImg']} alt="letsplay" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
                                 <span>LET'S PLAY</span>
                             </label>

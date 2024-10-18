@@ -4,7 +4,7 @@ import { SLIDER } from '../../utils/interfaces/interface';
 
 
 export const Carousel: React.FC<SLIDER> = (params: SLIDER) => {
-    const { title, img, width, height, url } = params;
+    const { title, img, width, height} = params;
 
     var settings = {
         dots: true,
