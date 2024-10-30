@@ -44,7 +44,13 @@
     bottom: 0;
     text-align: center;
     opacity: 0;
+    .hover-text {
+      font-family: 'La Belle Aurore';
+      font-size: 55px;
+      letter-spacing: 1px;
+    }
   }
+
 
   .img-space {
     padding: 5px;

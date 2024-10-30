@@ -28,12 +28,12 @@ export const Welcome: React.FC = () => {
     }, [])
     return (
         <>
-            <div className={`background text padding-thirty padding-all`}>
+            <section className={`background text padding-thirty padding-all`}>
                 <Weather />
-                <div className={`row align-center`}>
-                    <div className={`img-container`}>
+                <section className={`row align-center`}>
+                    <section className={`img-container`}>
                         <img src={media['businessImg']} alt="business_picture" className={`main-pic`} />
-                    </div>
+                    </section>
                     <summary className={`subtitle`}>
                         <AnimatedLetters
                             letters={lettersAnimation}
@@ -49,20 +49,24 @@ export const Welcome: React.FC = () => {
                     </summary>
 
                     <SpinningCube />
-                </div>
+                </section>
                 <article className={'paragraph-padding welcome-paragraph-pad-top'}>
                     <p className={`margin-left-fifty`}>
-                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer,
-                        with the goal in mind to expand my skills and soon become an experienced Full Stack Developer.
+                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
+                        Strongly proficient in Angular.js, React.js, React Native, JavaScript/Typescript, Sass, CSS3, Node.js,
+                        RestFUL Api, mySQL database, Front-End Architecture and more modern frontend development tools.
                     </p>
                     <p className={`margin-left-fifty`}>
                         I am a problem solver, a team player, highly disciplined and very result driven.
                         In my experience there are successful track records of looking at requirements, putting together estimates, and delivering projects successfully and on schedule.
                     </p>
                     <p className={`margin-left-fifty`}>
-                        As part of my duties, I provided enhancements to software, mobile applications, and websites.
-                        I create logic approaches and provide immediate solutions to unexpected problems.
-                        As a Software Developer, my goal is to continuously increase my programming skills to present better solutions to my employers and their clients.
+                        I have a strong experience in building and maintaining high-performance web applications, mobile applications and softwares by
+                        developing new user-facing features, optimizing applications for maximum speed, and ensuring that all components and the overall application are robust and easy to maintain.                       
+                    </p>
+                    <p className={`margin-left-fifty`}>
+                        As a Software Developer, my goal is to create logical approaches and provide immediate solutions to unexpected problems by
+                        continuously increase my skills to present better solutions to employers and clients.
                     </p>
                 </article>
 
@@ -71,7 +75,7 @@ export const Welcome: React.FC = () => {
                         <NavLink to='/about' >
                             <img className={`img-space`} src={media['aboutImg']} alt="about" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
-                                <span>ABOUT</span>
+                                <span className={`hover-text`}>ABOUT</span>
                             </label>
                         </NavLink>
                     </p>
@@ -79,7 +83,7 @@ export const Welcome: React.FC = () => {
                         <NavLink to='/projects' >
                             <img className={`img-space`} src={media['projectImg']} alt="projects" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
-                                <span>PROJECTS</span>
+                                <span className={`hover-text`}>PROJECTS</span>
                             </label>
                         </NavLink>
                     </p>
@@ -89,7 +93,7 @@ export const Welcome: React.FC = () => {
                         <NavLink to='/contact' >
                             <img className={`img-space`} src={media['contactImg']} alt="contact" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
-                                <span>CONTACT</span>
+                                <span className={`hover-text`}>CONTACT</span>
                             </label>
                         </NavLink>
                     </p>
@@ -97,7 +101,7 @@ export const Welcome: React.FC = () => {
                         <NavLink to='/letsplay' >
                             <img className={`img-space`} src={media['letsPlayImg']} alt="letsplay" width={img_width} height={img_height} />
                             <label className={`img-text text`}>
-                                <span>LET'S PLAY</span>
+                                <span className={`hover-text`}>LET'S PLAY</span>
                             </label>
                         </NavLink>
                     </p>
@@ -110,7 +114,7 @@ export const Welcome: React.FC = () => {
                     wrapperClass="loader-active"
                     colors={['#306cce', '#72a1ed']}
                 />
-            </div>
+            </section>
         </>
     )
 }
