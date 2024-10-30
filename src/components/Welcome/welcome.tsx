@@ -54,7 +54,7 @@ export const Welcome: React.FC = () => {
                     <p className={`margin-left-fifty`}>
                         I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
                         Strongly proficient in Angular.js, React.js, React Native, JavaScript/Typescript, Sass, CSS3, Node.js,
-                        RestFUL Api, mySQL database, Front-End Architecture and more modern frontend development tools.
+                        RestFUL Api, mySQL database, Front-End Architecture and more modern Front-End development tools.
                     </p>
                     <p className={`margin-left-fifty`}>
                         I am a problem solver, a team player, highly disciplined and very result driven.
@@ -62,7 +62,10 @@ export const Welcome: React.FC = () => {
                     </p>
                     <p className={`margin-left-fifty`}>
                         I have a strong experience in building and maintaining high-performance web applications, mobile applications and softwares by
-                        developing new user-facing features, optimizing applications for maximum speed, and ensuring that all components and the overall application are robust and easy to maintain.                       
+                        applying best practices for full software development life cycle, including coding standards, software architectures, 
+                        code reviews, source control management, continuous deployments, testing, and operational excellence. 
+                        I am very proficient in developing new user-facing features, optimizing applications for maximum speed, and ensuring 
+                        that all components and the overall application are robust and easy to maintain.                       
                     </p>
                     <p className={`margin-left-fifty`}>
                         As a Software Developer, my goal is to create logical approaches and provide immediate solutions to unexpected problems by
