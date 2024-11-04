@@ -27,21 +27,23 @@ export const About: React.FC = () => {
                 </section>
                 <article className={'paragraph-padding'}>
                     <p className={`margin-left-fifty`}>
-                        My work and education history is quite unique, they have been some major changes in my career.
-                        I have started in the luxury hotel and high-end restaurant business to eventually, due to private family reason, make a full switch into the IT world and more specifically, Software Development by obtaining a certification in Full Stack Web Development at the University of California Los Angeles, Go Bruins!!
+                        My professional and educational journey is quite unique, beginning in the luxury hotel and high-end restaurant industry before making a full transition into IT and software development.
+                        This shift was motivated by personal circumstances, leading me to obtain a certification in Full Stack Web Development from the University of California, Los Angeles—Go Bruins!
                     </p>
                     <p className={`margin-left-fifty`}>
-                        I have a natural ability to rewire myself and adapt in change of circumstances with a strong will to succeed in any of the challenges I am facing and I pride myself as a logical and creative thinker who enjoys learning new languages, frameworks and technologies.
-                        My analytical skills, education, and passion are crucial to be one step ahead in this ever evolving technological industry. My stellar organisational skills are essential to keep code DRY as re-factored as possible.
+                        I possess a natural ability to adapt to changing circumstances and a strong determination to overcome challenges.
+                        I take pride in being both a logical and creative thinker, and I enjoy exploring new languages, frameworks, and technologies. My analytical skills, combined with my education and passion for continuous learning, enable me to stay ahead in the rapidly evolving tech landscape.
+                        Additionally, my organizational skills are vital for keeping my code DRY and well-refactored.
                     </p>
                     <p className={`margin-left-fifty`}>
-                        The gratification of solving problems is what drives me to be a better programmer. 
-                        A business background combined with the entrepreneurial spirit can be utilised for aligning profitable goals when programming software.
-                        I have over a decade of experience in customer service in Europe and here in the United States. While working in the luxury hotel and restaurant industry I was trained to maintain calm under pressure and under stressful situations, focusing on the customer experience. My fire comes from a passion of helping people and my way of thinking “outside the comfort zone” to find a solution, which translates to problem solving, whether that is a human or a computer related challenge.
-                        I have applied the same way of thinking during my switch onto my new career path in IT and software development and I am able to successfully combine the two concepts to be a step ahead.
+                        The satisfaction of solving problems drives me to become a better programmer. My background in business and an entrepreneurial mindset allow me to align programming projects with profitable goals. With over a decade of experience in customer service across Europe and the United States,
+                        I have been trained to maintain composure under pressure while prioritizing the customer experience. My passion for helping others and my ability to think "outside the box" enhance my problem-solving skills, whether addressing challenges related to human interaction or technical issues.
+                    </p>
+                    <p className={`margin-left-fifty`}>
+                        As I transitioned into the IT field, I successfully integrated these skills and perspectives, positioning myself to excel in software development while leveraging my diverse background to deliver innovative solutions.
                     </p>
                 </article>
-                
+
                 <FidgetSpinner
                     visible={true}
                     height="80"

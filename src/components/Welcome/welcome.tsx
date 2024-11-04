@@ -52,24 +52,24 @@ export const Welcome: React.FC = () => {
                 </section>
                 <article className={'paragraph-padding welcome-paragraph-pad-top'}>
                     <p className={`margin-left-fifty`}>
-                        I am a mid-level Front-End Developer, Mobile Developer and TV App Developer.
-                        Strongly proficient in Angular.js, React.js, React Native, JavaScript/Typescript, Sass, CSS3, Node.js,
-                        RestFUL Api, mySQL database, Front-End Architecture and more modern Front-End development tools.
+                        I am a mid-level Front-End Developer, Mobile Developer, and TV App Developer with strong proficiency in Angular.js, 
+                        React.js, React Native, JavaScript/TypeScript, Sass, CSS3, Node.js, RESTful APIs, MySQL databases, 
+                        Front-End Architecture, and a variety of modern development tools.
                     </p>
                     <p className={`margin-left-fifty`}>
-                        I am a problem solver, a team player, highly disciplined and very result driven.
-                        In my experience there are successful track records of looking at requirements, putting together estimates, and delivering projects successfully and on schedule.
+                        As a problem solver and a dedicated team player, I am highly disciplined and results-driven. 
+                        My experience includes successfully assessing project requirements, providing accurate estimates, and delivering projects on time.
                     </p>
                     <p className={`margin-left-fifty`}>
-                        I have a strong experience in building and maintaining high-performance web applications, mobile applications and softwares by
-                        applying best practices for full software development life cycle, including coding standards, software architectures, 
-                        code reviews, source control management, continuous deployments, testing, and operational excellence. 
-                        I am very proficient in developing new user-facing features, optimizing applications for maximum speed, and ensuring 
-                        that all components and the overall application are robust and easy to maintain.                       
+                        I have extensive experience in building and maintaining high-performance web and mobile applications, 
+                        applying best practices throughout the full software development lifecycle. 
+                        This includes adherence to coding standards, software architecture principles, code reviews, source control management, 
+                        continuous deployment, testing, and operational excellence. I am adept at developing user-facing features, 
+                        optimizing applications for maximum speed, and ensuring that all components are robust and easy to maintain.
                     </p>
                     <p className={`margin-left-fifty`}>
-                        As a Software Developer, my goal is to create logical approaches and provide immediate solutions to unexpected problems by
-                        continuously increase my skills to present better solutions to employers and clients.
+                        My goal as a Software Developer is to devise logical solutions and address unexpected challenges effectively. 
+                        I am committed to continuously enhancing my skills to deliver better solutions for employers and clients alike.
                     </p>
                 </article>
 

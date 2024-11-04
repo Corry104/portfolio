@@ -30,10 +30,10 @@ export const Projects: React.FC = () => {
             </section>
             <article className={'paragraph-padding'}>
                 <p className={`margin-left-fifty`}>
-                    I have been involved in several projects throughout my career and I am very proud of all the work I have done because I gave 100% to each and every one of them.
+                    I have been involved in a variety of projects throughout my career, and I take great pride in the work I’ve accomplished, giving 100% to each endeavor.
                 </p>
                 <p className={`margin-left-fifty`}>
-                    Inside my <a href="https://github.com/Corry104" target="_blank" rel="noopener noreferrer" className={`text`}>GitHub profile</a> you will find more projects based on  my experience level at the time they have been coded.
+                    You can explore my <a href="https://github.com/Corry104" target="_blank" rel="noopener noreferrer" className={`text`}>GitHub profile</a> to find a selection of projects that reflect my experience and growth at the time they were developed. Each project showcases my dedication to quality and my commitment to continuous improvement in my skills.
                 </p>
             </article>
             <Carousel 
